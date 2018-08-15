@@ -1,0 +1,17 @@
+#videosList {
+    max-width: 600px; 
+     overflow: hidden;
+   }
+   
+   .video {
+     background-image: #cccccc;
+     height: 450px;
+     width: 450px;
+     margin-bottom: 50px;
+     transform:scale(2.0);
+   }
+   
+   /* Hide Play button + controls on iOS */
+   video::-webkit-media-controls {
+       display:none !important;
+   }

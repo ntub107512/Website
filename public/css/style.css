@@ -6,7 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 html, body{
     font-size: 100%;
-	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
 	background:#ffffff;
 	margin: 0;
 }
@@ -15,7 +15,7 @@ p,ul li,ol li{
 	font-size:14px;
 }
 h1,h2,h3,h4,h5,h6{
-	font-family: 'Bree Serif', serif;
+	/*font-family: 'Bree Serif', serif;*/
 	margin:0;
 }
 ul,label{
@@ -26,6 +26,13 @@ body a:hover{
 	text-decoration:none;
 }
 input[type="submit"],input[type="reset"],a{
+	-webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    transition:0.5s ease-in;
+}
+input[type="button"],input[type="reset"],a{
 	-webkit-transition: 0.5s ease-in;
     -moz-transition: 0.5s ease-in;
     -ms-transition: 0.5s ease-in;
@@ -53,12 +60,22 @@ input[type="submit"],input[type="reset"],a{
     min-height: 300px;
 	position: relative;
 }
+.banner2{
+	background: url(../images/banner.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 145px;
+	position: relative;
+}
 .w3_agileits_banner_main_grid{
 	padding:2em 0 0;
 	position:relative;
 }
 .w3_agile_logo{
-	float:left;
+	float:center;
 }
 .w3_agile_logo h1 a{
 	font-size:1em;
@@ -70,7 +87,9 @@ input[type="submit"],input[type="reset"],a{
 	padding: .2em .5em;
     background: #a4dd25;
     display: inline-block;
-    color: #212121;
+	color: #212121;
+	margin-right:5px;
+	
 }
 .w3_agile_logo h1 a i{
 	display: block;
@@ -79,7 +98,38 @@ input[type="submit"],input[type="reset"],a{
     line-height: 0;
     letter-spacing: 2.5px;
 	text-transform:capitalize;
+	
 }
+/*login profile*/
+.loginprofile n{
+	float:right;
+	margin-top: 150px;
+	margin-right:-80px;
+	font-size:20px;
+
+	display:block;
+}
+
+.loginprofile button:hover{
+	color:#fff;
+}
+
+.loginprofile img{
+	width:50px;
+	height: 50px;
+
+	border:2px solid #fff;
+    box-shadow:0px 0px 10px #000;
+    border-radius:40px;
+	float: right; 
+	margin-top:145px;
+	margin-right:-230px;
+
+	display:block;
+}
+
+
+/*login profile*/
 .agileits_social_list li{
 	display: inline-block;
     margin-right: 3em;
@@ -126,7 +176,7 @@ a.w3_agile_vimeo:hover{
     text-decoration: none;
     display: block;
     text-transform: uppercase;
-	font-family: 'Bree Serif', serif;
+	/*font-family: 'Bree Serif', serif;*/
 }
 
 .shy-menu { 
@@ -273,7 +323,7 @@ a.w3_agile_vimeo:hover{
 .w3_banner_info_grid ul li a{
 	padding:10px 40px;
 	text-decoration:none;
-	font-family: 'Bree Serif', serif;
+	/*font-family: 'Bree Serif', serif;*/
 	color:#212121;
 }
 .w3l_contact,.w3ls_more:hover{
@@ -329,7 +379,7 @@ span.char3 {
 .modal-header {
     font-size:2em;
     color: #fff;
-    font-family:'Bree Serif', serif;
+    /*font-family:'Bree Serif', serif;*/
     text-align: center;
     text-transform: capitalize;
     background:#aeb09f;
@@ -480,6 +530,8 @@ button.close {
 .welcome,.newsletter,.about-bottom,.services-bottom{
 	padding:5em 0;
 }
+.welcome1{
+}
 .agileits_w3layouts_head{
 	text-align:center;
 	font-size:2em;
@@ -487,7 +539,7 @@ button.close {
 	text-transform:capitalize;
 }
 .agileits_w3layouts_head span{
-	color:#a0d034;
+	color:#a0d034;	
 }
 .w3_agile_image img{
 	margin:0 auto;
@@ -665,8 +717,10 @@ figure.agileits_effect_moses:hover img {
 }
 /*-- //welcome-bottom --*/
 /*-- news --*/
+
+/* 改課程的上下左右高度*/
 .w3ls_news_grids{
-	margin:3em 0 0;
+	margin:3em 0em 0em 0em;   
 }
 .agileits_w3layouts_news_grid{
 	padding:1.5em;
@@ -732,6 +786,7 @@ figure.agileits_effect_moses:hover img {
     -ms-transform: scale3d(0,0,1);
     transform: scale3d(0,0,1);
 }
+/*改課程裡浮狀字體大小*/
 .w3ls_news_grid:hover .w3layouts_news_grid .w3layouts_news_grid_pos,.w3_agileits_team_grid:hover .w3layouts_news_grid .w3layouts_news_grid_pos,
 .w3layouts_gallery_grid:hover .w3layouts_news_grid .w3layouts_news_grid_pos{
     opacity:1;
@@ -740,6 +795,7 @@ figure.agileits_effect_moses:hover img {
     -ms-transform: scale3d(1,1,1);
     transform: scale3d(1,1,1);
 }
+/*改課程裡浮狀字體浮出速度*/
 .w3ls_news_grid:hover .wthree_text,.w3_agileits_team_grid:hover .wthree_text,
 .w3layouts_gallery_grid:hover .wthree_text{
     opacity: 1;
@@ -747,9 +803,9 @@ figure.agileits_effect_moses:hover img {
     -moz-transform: translateY(0) scale3d(1,1,1);
     -ms-transform: translateY(0) scale3d(1,1,1);
     transform: translateY(0) scale3d(1,1,1);
-    -webkit-transition: transform 400ms ease 380ms;
-    -moz-transition: transform 400ms ease 380ms;
-    transition: transform 400ms ease 380ms;
+    -webkit-transition: transform 100ms ease 180ms;
+    -moz-transition: transform 100ms ease 180ms;
+    transition: transform 200ms ease 280ms;
 }
 .wthree_text{
     text-align: center;
@@ -803,16 +859,35 @@ figure.agileits_effect_moses:hover img {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+.w3ls_newsletter_grids input[type="button"] {
+    outline: none;
+    border: 2px solid #fff;
+    padding: 15px ;
+    font-size: 1em;
+    color: #df10c3;
+    background: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 .w3ls_newsletter_grids input[type="text"]::-webkit-input-placeholder,.w3ls_newsletter_grids input[type="email"]::-webkit-input-placeholder{
 	color:#212121 !important;
 }
 .w3ls_newsletter_grids input[type="text"],.w3ls_newsletter_grids input[type="email"],.w3ls_newsletter_grids input[type="submit"] {
 	width: 33.33%;
 }
+.w3ls_newsletter_grids input[type="text"],.w3ls_newsletter_grids input[type="email"],.w3ls_newsletter_grids input[type="button"] {
+	width: 33.33%;
+}
 .w3ls_newsletter_grids input[type="submit"]:hover{
 	background:#212121;
 	color:#fff;
 	border-color:#212121;
+}
+.w3ls_newsletter_grids input[type="button"]:hover{
+	background:#30f309c9;
+	color:#fff;
+	border-color:#30f309c9;
 }
 /*-- //newsletter --*/
 /*-- footer --*/
@@ -1084,7 +1159,7 @@ figure.agileits_effect_moses:hover img {
 .agileits_w3layouts_learn_more a{
     padding: 10px 40px;
     text-decoration: none;
-    font-family: 'Bree Serif', serif;
+    /*font-family: 'Bree Serif', serif;*/
     color: #a4dd25;
     border: 2px solid #fff;
 	display: block;
@@ -1107,6 +1182,7 @@ figure.agileits_effect_moses:hover img {
 }
 .w3_agileits_team_grid{
 	text-align:center;
+	/*margin: 10%;*/
 }
 .w3_agileits_team_grid ul li{
 	margin:0 1em;
@@ -1298,9 +1374,10 @@ figure.agileits_effect_moses:hover img {
 }
 .agileits_mail_grid_right1 input[type="submit"]{
 	outline: none;
-    width: 35%;
+    width: 100%;
     background: #a0d034;
-    color: #212121;
+	color: #212121;
+	margin: 2em 0em -7em 0em;
     padding: 10px 0;
     font-size: 14px;
     text-transform: uppercase;
@@ -1308,8 +1385,25 @@ figure.agileits_effect_moses:hover img {
     letter-spacing: 2px;
     border: none;
 }
+.agileits_mail_grid_right1 input[type="button"]{
+	outline: none;
+    width: 100%;
+    background: #df10c3;
+	color: #212121;
+	padding: 10px 0;
+	margin-top: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: none; 
+}
 .agileits_mail_grid_right1 input[type="submit"]:hover{
     background:#212121;
+    color: #fff;
+}
+.agileits_mail_grid_right1 input[type="button"]:hover{
+    background:#30f309c9;
     color: #fff;
 }
 .w3layouts_mail_grid_left1{
@@ -1351,6 +1445,10 @@ figure.agileits_effect_moses:hover img {
 .w3_submit{
 	text-align:right;
 }
+.w3_view{
+	text-align:center;
+}
+
 .w3_agileits_mail_right_grid{
 	text-align:center;
 	border:2px solid #aeb09f;
@@ -1464,7 +1562,7 @@ ul.bs-glyphicons-list li:hover span {
     position: relative;
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    /*font-family: 'Glyphicons Halflings';*/
     font-style: normal;
     font-weight: 400;
     line-height: 1;
@@ -1520,7 +1618,7 @@ h3.agileits-icons-title {
     position: relative;
     top: 1px;
     display: inline-block;
-    font-family: 'Glyphicons Halflings';
+    /*font-family: 'Glyphicons Halflings';*/
     font-style: normal;
     font-weight: 400;
     line-height: 1;
@@ -1539,6 +1637,16 @@ h3.agileits-icons-title {
 	}
 	h3.agileits-icons-title {
 		font-size: 30px;
+	}
+	#mis-slideWord{
+		font-size:31px;
+	}
+	w3_agile_logo img{
+		margin-right:100px;
+		margin-top:-100px;
+	}
+	w3_agile_logo n{
+		font-size:50px;
 	}
 }
 @media (max-width:991px){
@@ -1892,11 +2000,25 @@ h2.typoh2{
 	.w3_agileits_banner_bottom_pos_grid {
 		padding: 7em 2em;
 	}
+	.contactTitle2{
+		font-size: 22px;
+	}
 	.wthree_welcome_bottom_left {
 		padding: 2.5em 3em 0;
 	}
+	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:11%;
+		font-size: .9em;
+	}
+	#mis-slideWord{
+		font-size:30px;
+	}
 }
 @media (max-width:1366px){
+	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:11%;
+		font-size: .9em;
+	}
 	.banner {
 		min-height: 630px;
 	}
@@ -1927,8 +2049,16 @@ h2.typoh2{
 	.agileinfo_grid figure figcaption {
 		padding: 4em;
 	}
+	#mis-slideWord{
+		font-size:29px;
+	}
+	
 }
 @media (max-width:1280px){
+	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:11%;
+		font-size: .9em;
+	}
 	.agile_banner_bottom_grid_left_grid {
 		width: 85px;
 		height: 85px;
@@ -1951,8 +2081,15 @@ h2.typoh2{
 	.agileinfo_grid figure figcaption {
 		padding: 3.5em;
 	}
+	#mis-slideWord{
+		font-size:28px;
+	}
 }
 @media (max-width: 1080px){
+	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:11%;
+		font-size: .9em;
+	}
 	.agile_banner_bottom_grid_left_grid {
 		width: 75px;
 		height: 75px;
@@ -2023,6 +2160,9 @@ h2.typoh2{
 	.banner1 {
 		min-height: 220px;
 	}
+	.banner2 {
+		min-height: 120px;
+	}
 	.w3layouts_breadcrumbs_right h2 {
 		font-size: 1.7em;
 	}
@@ -2066,8 +2206,18 @@ h2.typoh2{
 	.testimonials {
 		padding: 4em 0 0;
 	}
+	#mis-slideWord{
+		font-size:27px;
+	}
+	.contactTitle2{
+		font-size: 18px;
+	}
 }
 @media (max-width: 1024px){
+	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:21%;
+		font-size: .9em;
+	}
 	.w3_banner_info_grid ul li {
 		font-size: 14px;
 	}
@@ -2083,9 +2233,13 @@ h2.typoh2{
 	.agileinfo_grid figure figcaption {
 		padding: 2em;
 	}
+	#mis-slideWord{
+		font-size:27px;
+	}
 }
 @media (max-width: 991px){
 	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:11%;
 		font-size: .9em;
 	}
 	.w3_agile_logo h1 a i {
@@ -2142,6 +2296,7 @@ h2.typoh2{
 	.agileinfo_grid figure figcaption {
 		padding: 5em 3em;
 	}
+	/*改課程在電腦網頁大小開啟時的寬度*/
 	.w3ls_news_grid {
 		float: left;
 		width: 33.33%;
@@ -2236,6 +2391,9 @@ h2.typoh2{
 	.w3layouts_mail_grid_left2 {
 		width: 88%;
 	}
+	#mis-slideWord{
+		font-size:25px;
+	}
 }
 @media (max-width: 900px){
 	.wthree_banner_bottom_grid_right h4 {
@@ -2250,7 +2408,11 @@ h2.typoh2{
 	.agileinfo_grid figure figcaption {
 		padding: 3.8em 3em;
 	}
+	#mis-slideWord{
+		font-size:24px;
+	}
 }
+
 @media (max-width: 800px){
 	.banner {
 		min-height: 580px;
@@ -2287,6 +2449,12 @@ h2.typoh2{
 	.w3_agileits_footer_copy {
 		margin: 3em 0 0;
 	}
+	#mis-slideWord{
+		font-size:23px;
+	}
+	.contactTitle2{
+		font-size: 16px;
+	}
 }
 @media (max-width: 768px){
 	.w3_banner_info_grid p {
@@ -2312,6 +2480,10 @@ h2.typoh2{
 		padding: 13px 0;
 		font-size: 14px;
 	}
+	.w3ls_newsletter_grids input[type="button"] {
+		padding: 13px 0;
+		font-size: 14px;
+	}
 	.w3_agile_about_grid_left h3 {
 		font-size: 1.3em;
 	}
@@ -2325,6 +2497,9 @@ h2.typoh2{
 	}
 	#map {
 		min-height: 350px;
+	}
+	#mis-slideWord{
+		font-size:23px;
 	}
 }
 @media (max-width: 736px){
@@ -2419,19 +2594,25 @@ h2.typoh2{
 	}
 	.welcome, .newsletter, .about-bottom, .services-bottom,.testimonials {
 		padding: 3em 0;
-	}
-	.agile_testimonials_grid_right h5 {
+	}                       
 		font-size: 1.5em;
 	}
 	.wthree_text {
 		padding: 3em 0 0;
+	}
+	#mis-slideWord{
+		font-size:22px;
 	}
 }
 @media (max-width: 600px){
 	.shy-menu-panel ul li {
 		font-size: 13px;
 	}
+	.contactTitle2{
+		font-size: 14px;
+	}
 	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:41%;
 		font-size: .8em;
 	}
 	.agile_social_icons_banner {
@@ -2478,6 +2659,9 @@ h2.typoh2{
 	.banner1 {
 		min-height: 180px;
 	}
+	.banner2 {
+		min-height: 95px;
+	}
 	.w3_agile_about_grid_left h3 {
 		font-size: 1.2em;
 	}
@@ -2499,6 +2683,9 @@ h2.typoh2{
 	}
 	#map {
 		min-height: 300px;
+	}
+	#mis-slideWord{
+		font-size:20px;
 	}
 }
 @media (max-width: 568px){
@@ -2556,11 +2743,47 @@ h2.typoh2{
 	.agileits_mail_grid_right1 input[type="submit"] {
 		width: 45%;
 	}
+	.agileits_mail_grid_right1 input[type="button"] {
+		width: 45%;
+	}
 	.w3_agileits_mail_right_grid_pos {
 		left: 40%;
 	}
+	#mis-slideWord{
+		font-size:18px;
+	}
+}
+
+
+@media (max-width: 600px){
+	.nav107512 ul {
+		margin-top:-20px;
+		text-align: left;
+	}
+	.nav107512 ul li a {
+		display: inline-block;
+	}
+	.is-open .nav107512 {
+		width: 100%;
+	}
+	.nav107512 ul {
+		text-align: center;
+		padding: -10em 0 0em 0em;
+	}
+	.nav107512 ul li {
+		font-size: 19px;
+		padding-top: -100px;
+	}
+	.menu-icon107512 {
+		margin-top: -.5em;
+		margin-left:-1.2em;
+	}
 }
 @media (max-width: 480px){
+	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:33%;
+		font-size: .7em;
+	}
 	.w3_agileits_banner_main_grid {
 		padding: 1em 0 0;
 	}
@@ -2636,9 +2859,10 @@ h2.typoh2{
 		padding: 8px;
 		font-size: 12px;
 	}
+	/*改課程在縮小版型時的寬度*/
 	.w3ls_news_grid {
 		padding: 0 1em;
-		float: none;
+		float:fixed;
 		width: 100%;
 	}
 	.wthree_text h3 {
@@ -2651,7 +2875,7 @@ h2.typoh2{
 		font-size: 1.2em;
 	}
 	.w3ls_news_grid:nth-child(2){
-		margin:2em 0;
+		margin:1em 0;
 	}
 	.agileits_w3layouts_news_grid ul li:last-child {
 		margin-left: 2em;
@@ -2755,7 +2979,19 @@ h2.typoh2{
 		width: 80%;
 	}
 }
+
 @media (max-width: 414px){
+	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:32%;
+		font-size: .7em;
+	}
+	.nav107512 ul li {
+		font-size: 15px;
+	}
+	.menu-icon107512 {
+		margin-top: -0.9em;
+		margin-left:-1.5em;
+	}
 	.w3_banner_info {
 		width: 100%;
 		margin: 4em 0 0;
@@ -2879,6 +3115,7 @@ h2.typoh2{
 		font-size: 1.15em;
 	}
 	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:26%;
 		font-size: .75em;
 	}
 	.agileits_social_list li a {
@@ -2905,6 +3142,9 @@ h2.typoh2{
 	.agileits_mail_grid_right1 input[type="submit"] {
 		width: 100%;
 	}
+	.agileits_mail_grid_right1 input[type="button"] {
+		width: 100%;
+	}
 	.w3layouts_mail_grid_left2 {
 		width: 75%;
 	}
@@ -2919,6 +3159,10 @@ h2.typoh2{
 	}
 }
 @media (max-width: 375px){
+	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:25%;
+		font-size: .7em;
+	}
 	.w3_banner_info_grid h3 {
 		font-size: 1.1em;
 	}
@@ -2937,6 +3181,9 @@ h2.typoh2{
 	.banner1 {
 		min-height: 140px;
 	}
+	.banner2 {
+		min-height: 55px;
+	}
 	.w3_agile_services_grids {
 		padding-top: 0;
 	}
@@ -2946,9 +3193,11 @@ h2.typoh2{
 }
 @media (max-width: 320px){
 	.w3_agile_logo h1 a span {
+		position:absolute; top:50%; left:21%;
 		padding: .1em .3em .15em;
 	}
 	.w3_agile_logo h1 a {
+		position:absolute; top:50%; left:21%;
 		font-size: .7em;
 	}
 	.agileits_social_list li {
@@ -3019,6 +3268,10 @@ h2.typoh2{
 	}
 	.w3ls_newsletter_grids input[type="submit"] {
 		padding: 11px 0;
+		font-size: 13px;
+	}
+	.w3ls_newsletter_grids input[type="button"] {
+		padding: 20px 0;
 		font-size: 13px;
 	}
 	.agileits_w3layouts_footer_logo h2 a {

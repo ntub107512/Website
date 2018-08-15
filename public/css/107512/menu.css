@@ -1,8 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
-$icon--color:#1e2023;
+$icon--color:#000;
 $font--color:#ffffff;
-$font--color--active:#000000;
+$font--color--active:#000;
 $transition--length: .8;
 
 

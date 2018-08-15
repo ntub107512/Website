@@ -1,0 +1,188 @@
+/*選擇影片btn*/
+.fileContainer {
+    overflow: hidden;
+    position: relative;
+	cursor:pointer;
+	color:white;
+	background-color:#19AE7D;
+	border: 5px solid #19AE7D;
+    border-radius: 8px;
+	margin-left: 45%;
+	margin-right:5%;
+	/*margin-top: -50px;*/
+	width: 50%;
+	font-weight:10;
+}
+
+.fileContainer [type=file] {
+    cursor: pointer;
+    display: none;
+    font-size: 30px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 60%;
+    opacity: 0;
+    position: relative;
+    text-align: center;
+	margin-top: -50px;
+    top: 0;
+}
+
+.video{
+	margin-bottom: -15px;
+}
+
+body {
+	background: #242943;
+}
+
+/*HW form*/
+form.white-popup-block mfp-hide{
+	height: auto;
+	min-height: 800px;
+}
+
+#test-form{
+	height: 100%;
+	height: auto;
+}
+#test-form h5{
+	margin-bottom: -10px;
+}
+
+#test-form textarea{
+	border-radius: 8px;
+	margin-top: 30px;
+}
+label.textarea{
+	margin-top: 30px;
+}
+
+#test-form label{
+	font-size: 100%;
+	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif; 
+	/*display: none;*/
+}
+
+/*HW選擇照片btn*//*
+#test-form.img{
+	font-size: 100%;
+	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif; 
+	margin: 10%;
+	margin-top: 150px;
+	padding-top: 100px;
+	padding: 50%;
+}*/
+/*選擇圖片btn*/
+label.img{
+	cursor: pointer;
+	color:white;
+	background-color:#19AE7D;
+	border: 5px solid #19AE7D;
+    border-radius: 5px;
+	margin-bottom: 15px;
+	font-weight:10;
+	text-align:center;
+	padding-bottom:25px;
+	font-size: 50px;
+}
+
+label.img [type=file] {
+	cursor: pointer;
+	color:white;
+    font-size: 50px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: relative;
+    top: 0;
+}
+
+/*Homework Form版型調整*/
+a.popup-with-form{
+	color: white;
+	text-decoration:none;
+}
+
+#test-form p{
+	text-align: center;
+}
+
+#test-form h2{
+	text-align: center;
+	color: #00A925;
+}
+#test-form label{
+	font-size: 100%;
+	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif; 
+	/*display: none;*/
+}
+
+#form1{
+	width: 50%;
+}
+
+/**/
+#buttonCreate{
+	margin-right: 6%;
+	margin-left:10%;
+	margin-top: 20px;
+	color: 
+}
+
+div.containerbuttonview{
+	padding-left: 5%;
+	padding-right: 6%;
+	padding-bottom: 3%;
+	text-align: center;
+}
+
+textarea.classContent{
+	margin-top: 30px;
+	color: black;
+	border-radius: 8px;
+}
+
+#textarea{
+	border-radius:8px;
+}
+/*
+.textarea{
+	margin-top: 10%;
+}
+*/
+
+label.hw_Q{
+	padding-top: 10px; 
+	color:#2d2d2d;
+	font-weight:normal;
+	font-size: 22px;
+	text-align:center;
+	margin-bottom:0px;
+}
+label.btn{
+	margin-left: 43%;
+	margin-right:5%;
+	margin-bottom:auto;
+}
+
+
+div.hw{
+	width: 60%;
+	margin-left:20%;
+	margin-right:20%;
+	margin-top: 6%;
+}
+
+div.hw h2{
+	color:darkblue;
+}
+
+h2.classVidH2{
+	text-align:left;
+	width: 60%;
+	margin-left:20%;
+	margin-right:20%;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	color: darkblue;
+}

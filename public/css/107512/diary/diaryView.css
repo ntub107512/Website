@@ -1,0 +1,493 @@
+/*
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+display: block;
+}
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+/*font-family: inherit;
+font-weight: 500;
+line-height: 1.1;
+color: inherit;
+}
+
+
+body {
+  background: #FFF;
+  color: #666;
+  /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+p {
+  line-height: 150%;
+}
+
+#portfolio {
+padding: 20px 0px 50px 0px;
+position: relative;
+display: block;
+background: #f7f7f7;
+}
+
+.containerContent {
+margin: 0 auto;
+/*
+width: 100%;
+max-width: 1400px;
+
+}
+
+.set_size_section1 {
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+display: inline-block;
+}
+
+.services_h2 {
+/*font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+color: black;
+margin-bottom: 5px;
+margin-top: 20px;
+font-size: 30px;
+text-align: center;
+}
+
+#portfolio .folio-list {
+padding: 0;
+list-style: none;
+margin: 0 auto;
+width: 60%;
+justify-content: center;
+display: flex;
+margin-top: 50px;
+flex-direction: row;
+flex-wrap: wrap;
+}
+
+
+
+#portfolio .thumbnail {
+display: block;
+padding: 4px;
+margin-top: 10px;
+margin-right: 30px;
+line-height: 1.42857143;
+border-radius: 4px;
+-webkit-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out;
+}
+
+#portfolio figure {
+margin: 0;
+}
+
+
+#portfolio .folio-list img {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+#portfolio .folio-thumb > h3 {
+  /*font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 3px;
+}
+
+#portfolio .folio-thumb > p {
+  /*font-family: 'Droid Serif', serif;
+  word-spacing: 1px;
+  text-align: center;
+  font-size: 13px;
+  /*font-style: italic;
+  margin-bottom: 30px;
+  color:#aaa;
+}
+
+#portfolio .img-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: block;
+  bottom: 0;
+  left: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+  background-color: #333;
+  -ms-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#portfolio .img-title h5 {
+  color: #fed136;
+  /*font-family: 'RobotoSlab', serif;
+  text-align: left;
+  font-size: 15.5px;
+  display: block;
+  margin: 60px 10px 10px 20px;
+}
+
+#portfolio .img-title p {   /*課堂中顯示出敘述*/
+  color: #fff;
+  text-align: left;
+  /*font-family: 'Droid Serif', serif;
+  font-style: italic;
+  margin: 10px 10px 10px 20px;
+  font-size: 12px;
+  display: block;
+}
+
+#portfolio .gallery-item:hover .img-title {
+  opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+   filter: alpha(opacity=90);
+}
+
+#portfolio .gallery-item {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  display: block;
+  overflow: hidden;
+}
+
+#portfolio .img-title h5, .img-title p {
+  position: relative;
+  left: -200px;
+  width: 190px;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+#portfolio .img-title h5 {
+  -webkit-transition-delay: 200ms;
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -ms-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+
+#portfolio .img-title p {
+  -webkit-transition-delay: 400ms;
+  -moz-transition-delay: 400ms;
+  -o-transition-delay: 400ms;
+  -ms-transition-delay: 400ms;
+  transition-delay: 400ms;
+  width: 180px;
+}
+
+#portfolio .gallery-item:hover img{
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  width: 250px\9;
+  height: 250px\9;
+}
+
+
+/*自行修改*/
+/*
+.services_h2{
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background-image: url('https://webgradients.com/public/webgradients_png/016%20Deep%20Blue.png');  
+  height:1500px;
+  box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5);
+}
+
+/*
+.services_h2 h2{
+  margin-top:15px;
+}
+
+
+
+.set_size_section1{
+  /*border: 2px solid rgba(255, 255, 255, 0.3);
+  background-image: url('https://webgradients.com/public/webgradients_png/016%20Deep%20Blue.png');  /*https://webgradients.com/public/webgradients_png/016%20Deep%20Blue.png*/
+  background:rgba(0 ,0 , 0, 0);
+  height:1500px;
+  /*box-shadow:4px 4px 12px -2px rgba(20%,20%,40%,0.5); 
+  width: 1500px;
+}
+
+.set_size_section1 h2{
+  margin-top:15px;
+}
+
+.folio-list{
+  width:500px;
+  background:#FFB400;
+  margin-right:0px;
+  margin-left:0px;  
+}
+
+.containerContent{
+  background:#1F00E4;
+}
+
+.set_size_section1{
+  background:#FF0700;
+  padding:0;
+  width:800px;
+}
+
+.thumbnail folio-thumb{
+  background:#E000E0;
+  padding:0;
+  margin-right:0px;
+  margin-left:0px;  
+}
+
+.gallery-item img{
+  margin-right:100px;
+}
+*/
+
+
+
+/***************************************************/
+
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+/*@import url(https://fonts.googleapis.com/css?family=Montserrat:500);*/
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.containercourseView {
+	max-width: 100rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+
+.heading {
+	/*font-family: "Montserrat", Arial, sans-serif;*/
+	font-size: 2rem;
+	font-weight: 500;
+	line-height: 1.5;
+	text-align: center;
+	padding: 3.5rem 0;
+	color: #1a1a1a;
+}
+
+.heading span {
+	display: block;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
+
+/*--------self-------*/
+
+.gallery-item{
+ /* width:450px; /*課堂方格大小*/
+
+ width: 300px;
+  max-width: 450px;
+  min-width: 10px;
+  min-height: 10%;
+}
+
+
+
+
+/*
+.gallery-item:hover .img-title {
+  opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+   filter: alpha(opacity=90);
+   z-index: -10;
+  
+}
+
+.img-title h5 {
+  color: #fed136;
+  /*font-family: 'RobotoSlab', serif;
+  text-align: left;
+  font-size: 15.5px;
+  display: block;
+  margin: 60px 10px 10px 20px;
+}
+
+.img-title p {   /*課堂中顯示出敘述
+  color: #aaa;
+  text-align: left;
+  /*font-family: 'Droid Serif', serif;
+  font-style: italic;
+  margin: 10px 10px 10px 20px;
+  font-size: 12px;
+  display: block;
+}
+
+.img-title h5, .img-title p {
+  position: relative;
+  left: -200px;
+  width: 190px;
+  -webkit-transition: all 300ms ease-out;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -ms-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.img-title h5 {
+  -webkit-transition-delay: 200ms;
+  -moz-transition-delay: 200ms;
+  -o-transition-delay: 200ms;
+  -ms-transition-delay: 200ms;
+  transition-delay: 200ms;
+}
+
+.img-title p {
+  -webkit-transition-delay: 400ms;
+  -moz-transition-delay: 400ms;
+  -o-transition-delay: 400ms;
+  -ms-transition-delay: 400ms;
+  transition-delay: 400ms;
+  width: 180px;
+} 
+
+.img-title{
+  z-index: 50;
+}
+
+
+.img-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: block;
+  bottom: 0;
+  left: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+  background-color: #333;
+  -ms-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+div.img-title{
+  z-index: 100;
+  position: relative;
+}
+*/

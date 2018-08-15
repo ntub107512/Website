@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab');
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+
+html, body{
+	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;
+	font-size: 22px;
+}
+
+.img-title{
+    background:rgba(58, 162, 255, 0.7);
+}
+.img-title{
+	color: white;
+}
+
+h2{
+	margin-top: 50px;
+	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;	
+	text-align: center;
+}
+
+a.active{
+	text-decoration:none;
+}
+
+div.container{
+	margin-top:-50px;
+	margin-left: -3px;
+}
+div.gallery{
+	max-width: 100%;
+	min-width: 50%;
+}
+div.gallery-item{
+	max-width: 100%;
+	min-width: 50%;
+}
+
+div.containercourseView2{
+	width: 40%;
+	min-width: 10%;
+	margin-right: 40%;
+	margin-left: 15%;
+	margin-top: 20px;
+	/*padding-left: 10%;*/
+	border:0;
+}
+
+/*Diary總覽照片*/
+img.gallery-image{
+	/*min-width: 20%;
+	max-width: 100%;*/
+	width: 450px;
+	height: 450px;
+}
+div.gallery a{
+	text-decoration-line: none;
+	border-style:none;
+}
+.img-title{
+	max-height: 350px;
+	min-height: 100px;
+}
+
+#main h5{
+	color: rgba(252, 225, 74, 0.938);
+	font-size: 45px;
+	text-align: right;
+	/*padding-left: 70px;*/
+	line-height: 45px;
+	/*background: red;*/
+	width: 300px;
+	padding-top: 3px;
+	padding-bottom: 10px;
+}
+
+.img-title p{
+	font-size: 30px;
+	text-align: center;
+	padding-left: -210px;
+	margin-right: 500px;
+	background:orange;
+	border-radius: 10px;
+}
+/*show tag*/
+
+div.container-diary{
+	margin-left: 50%;
+}
+
+div.containerbuttonview a{
+	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif; 
+	margin-top:100%;
+	text-decoration-line: none;
+	border-style:none;
+}

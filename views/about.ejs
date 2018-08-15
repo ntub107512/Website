@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Germinate an Agriculture Category Flat Bootstrap Responsive Website Template | About Us :: w3layouts</title>
+<title>植得｜關於我們</title>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -23,9 +23,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //js -->
 <!-- font-awesome-icons -->
 <link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- 107512 menu -->
+<link href="css/107512/menu.css" rel="stylesheet"> 
+<link href="css/107512/menustyle107512.css" rel="stylesheet"> 
+<link href="css/107512/menustyle107512.scss" rel="stylesheet"> 
+
+<!-- /自己改的CSS -->
+<link href="css/107512/mainfont.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/107512/mainsetting.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/107512/107512style.css" rel="stylesheet" type="text/css" media="all" />
+
+
 <!-- //font-awesome-icons -->
 <link href="//fonts.googleapis.com/css?family=Bree+Serif&amp;subset=latin-ext" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+<link href="css/107512/about/myAbout.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/107512/font.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 	
 <body>
@@ -34,8 +48,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="w3_agileits_banner_main_grid">
 				<div class="w3_agile_logo">
-					<h1><a href="/index"><span>G</span>erminate<i>Grow healthy products</i></a></h1>
+					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
+					<img src="images/logo.png" style="height:15%; width:15%; background:#a1d034; border-radius: 15px;"></img>
 				</div>
+				<!--
 				<div class="agile_social_icons_banner">
 					<ul class="agileits_social_list">
 						<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -44,9 +60,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 					</ul>
 				</div>
+				-->
 				<div class="agileits_w3layouts_menu">
 					<div class="shy-menu">
-						<a class="shy-menu-hamburger">
+						<!--<a class="shy-menu-hamburger">
 							<span class="layer top"></span>
 							<span class="layer mid"></span>
 							<span class="layer btm"></span>
@@ -54,19 +71,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="shy-menu-panel">
 							<nav class="menu menu--horatio link-effect-8" id="link-effect-8">
 								<ul class="w3layouts_menu__list">
-									<li><a href="/index">Home</a></li>
-									<li class="active"><a href="/about">About Us</a></li> 
-									<li><a href="/services">Services</a></li>
-									<li><a href="/gallery">Gallery</a></li> 
-									<li><a href="/contact">Contact Us</a></li>
+									<li class="active"><a href="/index">首頁</a></li>
+									<li><a href="/about">關於我們</a></li> 
+									<li><a href="/services">教學</a></li>
+									<li><a href="/course">課程</a></li> 
+									<li><a href="/contact">會員</a></li>
 								</ul>
 							</nav>
-						</div>
+						</div>-->
 						<div class="clearfix"> </div>
 					</div>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
+			<!--- connect menu.css start-->
+			<div class="menu-icon107512">
+				<span class="menu-icon__line menu-icon__line-left"></span>
+				<span class="menu-icon__line"></span>
+				<span class="menu-icon__line menu-icon__line-right"></span>
+			</div>
+
+			<div class="nav107512">
+				<div class="nav__content">
+					<ul class="nav__list">
+						<li class="nav__list-item" style="text-decoration:none;"><a href="/index"><img src="images/menuhome.png" style="margin-right:7px;">首頁</img></li>
+						<li class="nav__list-item"><a href="/about"><img src="images/menuabout.png" style="margin-right:7px;">關於我們</img></li>
+						<li class="nav__list-item"><a href="/services"><img src="images/menuteach.png" style="margin-right:7px;">教學</img></li>
+						<li class="nav__list-item"><a href="/course"><img src="images/menucourse.png" style="margin-right:7px;">課程</img></li>
+							<li class="nav__list-item"><a href="/memberT"><img src="images/menuaccount.png" style="margin-right:7px;">會員</img></li>
+						<li class="nav__list-item"><a href="/loginForm"><img src="images/menuaccount.png" style="margin-right:7px;">登入</img></li>
+					</ul>
+				</div>
+			</div>
+			<!--- connect menu.css end-->
 		</div>
 	</div>
 <!-- banner -->
@@ -75,20 +112,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					Germinate
+					植得
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
 				</div>
 				<section>
 					<div class="modal-body">
 						<img src="images/4.jpg" alt=" " class="img-responsive" />
-						<p>Ut enim ad minima veniam, quis nostrum 
-							exercitationem ullam corporis suscipit laboriosam, 
-							nisi ut aliquid ex ea commodi consequatur? Quis autem 
-							vel eum iure reprehenderit qui in ea voluptate velit 
-							esse quam nihil molestiae consequatur, vel illum qui 
-							dolorem eum fugiat quo voluptas nulla pariatur.
-							<i>" Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
-								esse quam nihil molestiae consequatur.</i></p>
+						<p>點選下載
+							<i>" 2018 年度計畫 </i>
+						</p>
 					</div>
 				</section>
 			</div>
@@ -100,12 +132,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="w3layouts_breadcrumbs_left">
 				<ul>
-					<li><i class="fa fa-home" aria-hidden="true"></i><a href="/index">Home</a><span>/</span></li>
-					<li><i class="fa fa-info-circle" aria-hidden="true"></i>About</li>
+					<li><i class="fa fa-home" aria-hidden="true"></i><a href="/index">首頁</a><span>/</span></li>
+					<li><i class="fa fa-info-circle" aria-hidden="true"></i>關於我們</li>
 				</ul>
 			</div>
-			<div class="w3layouts_breadcrumbs_right">
-				<h2>About Us</h2>
+			<div class="w3layouts_breadcrumbs_right" style="font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;">
+				<h2>關於我們</h2>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
@@ -114,43 +146,47 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- about -->
 	<div class="welcome">
 		<div class="container">
-			<h3 class="agileits_w3layouts_head">Why <span>Choose</span> Us</h3>
+			<h3 class="agileits_w3layouts_head">為什麼 <span>選擇</span> 我們</h3>
 			<div class="w3_agile_image">
 				<img src="images/1.png" alt=" " class="img-responsive" />
 			</div>
-			<p class="agile_para">Morbi viverra lacus commodo felis semper, eu iaculis lectus nulla at sapien blandit sollicitudin.</p>
+			<p class="agile_para">孩子使用後，能帶給他們什麼改變？</p>
 			<div class="w3ls_news_grids"> 
 				<div class="col-md-6 w3_agile_about_grid_left">
-					<h3>Pellentesque a ligula nec dui ornare pulvinar in non sem condimentum erat</h3>
-					<p><i>In eleifend nisl fermentum bibendum euismod. Pellentesque ac mi quis tortor 
-						consequat scelerisque.</i> Sed eros urna, rhoncus nec tortor quis, pretium vestibulum
-						purus. Nunc quis augue nibh. Proin non enim non nulla scelerisque scelerisque 
-						vitae non est. Quisque iaculis leo at lacus malesuada mattis.</p>
+					<h3>來直接看看成效！</h3>
+					<p>
+						<ol class="custom-counter">
+							<li>反轉學校自然教學課程</li>
+							<li>培養獨立思考素養</li>
+							<li>實作機會提高</li>
+						</ol>
+						
+					透過大學生各種創意課程，孩子對於植物的了解度增加，<br>也變得更親近大自然，親身體驗許多與植物相關實驗等。</p>
 				</div>
 				<div class="col-md-6 w3_agile_about_grid_right">
-					<div class="skillbar" data-percent="78">
-					  <span class="skillbar-title" style="background: #f1703a;">Seeds</span>
+					<div class="skillbar" data-percent="98">
+					  <span class="skillbar-title" style="background: #f1703a;">植物了解度</span>
 					  <p class="skillbar-bar" style="background: #f88c5e;"></p>
 					  <span class="skill-bar-percent"></span>
 					</div>
 					<!-- End Skill Bar -->
 					
-					<div class="skillbar" data-percent="54">
-					  <span class="skillbar-title" style="background: #2980b9;">Growth</span>
+					<div class="skillbar" data-percent="85">
+					  <span class="skillbar-title" style="background: #2980b9;">大自然喜愛度</span>
 					  <p class="skillbar-bar" style="background: #3498db;"></p>
 					  <span class="skill-bar-percent"></span>
 					</div>
 					<!-- End Skill Bar -->
 					
-					<div class="skillbar" data-percent="76">
-					  <span class="skillbar-title" style="background: #a0d034;">Economy</span>
+					<div class="skillbar" data-percent="80">
+					  <span class="skillbar-title" style="background: #a0d034;">獨立思考能力</span>
 					  <p class="skillbar-bar" style="background: #b2ec2f;"></p>
 					  <span class="skill-bar-percent"></span>
 					</div>
 					<!-- End Skill Bar -->
 					
-					<div class="skillbar" data-percent="80">
-					  <span class="skillbar-title" style="background: #e7cc2c;">Planting</span>
+					<div class="skillbar" data-percent="85">
+					  <span class="skillbar-title" style="background: #e7cc2c;">親手實作機會</span>
 					  <p class="skillbar-bar" style="background: #f5d410;"></p>
 					  <span class="skill-bar-percent"></span>
 					</div>
@@ -179,10 +215,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- about-bottom -->
 	<div class="about-bottom">
 		<div class="container">
-			<h3><span>Agriculture</span> not only gives riches to a nation, but the
-				only riches she can call her own</h3>
+			<h3><span>植得</span> 感謝所有為我們努力的大學生跟贊助者們</h3>
 			<div class="agileits_w3layouts_learn_more agileits_learn_more hvr-radial-out">
-				<a href="#" data-toggle="modal" data-target="#myModal">Read More</a>
+				<a href="#" data-toggle="modal" data-target="#myModal">成果報告書&年度計畫</a>
 			</div>
 		</div>
 	</div>
@@ -190,15 +225,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- team -->
 	<div class="welcome">
 		<div class="container">
-			<h3 class="agileits_w3layouts_head">Meet Our <span>Amazing</span> Team</h3>
+			<h3 class="agileits_w3layouts_head">我們的 <span>堅強</span> 團隊</h3>
 			<div class="w3_agile_image">
 				<img src="images/1.png" alt=" " class="img-responsive" />
 			</div>
-			<p class="agile_para">Morbi viverra lacus commodo felis semper, eu iaculis lectus nulla at sapien blandit sollicitudin.</p>
+			<p class="agile_para">我們的團隊！！</p>
 			<div class="w3ls_news_grids w3_agileits_team_grids"> 
 				<div class="col-md-3 w3_agileits_team_grid"> 
 					<div class="w3layouts_news_grid">
-						<img src="images/10.jpg" alt=" " class="img-responsive" />
+						<img src="images/tomlin.jpg" alt=" " class="img-responsive" />
 						<div class="w3layouts_news_grid_pos">
 							<div class="wthree_text agileinfo_about_text">
 								<ul class="agileits_social_list">
@@ -209,12 +244,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</div>
-					<h4>Andria Carl</h4>
-					<p>Field Manager</p>
+					<h4>林宏仁老師</h4>
+					<p>指導老師</p>
 				</div>
 				<div class="col-md-3 w3_agileits_team_grid"> 
 					<div class="w3layouts_news_grid">
-						<img src="images/11.jpg" alt=" " class="img-responsive" />
+						<img src="images/10356052.jpg" alt=" " class="img-responsive" />
 						<div class="w3layouts_news_grid_pos">
 							<div class="wthree_text agileinfo_about_text">
 								<ul class="agileits_social_list">
@@ -225,12 +260,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</div>
-					<h4>Laura Doe</h4>
-					<p>Farmer</p>
+					<h4>曾天鈞</h4>
+					<p>組長</p>
 				</div>
 				<div class="col-md-3 w3_agileits_team_grid"> 
 					<div class="w3layouts_news_grid">
-						<img src="images/12.jpg" alt=" " class="img-responsive" />
+						<img src="images/10356001.jpg" alt=" " class="img-responsive" />
 						<div class="w3layouts_news_grid_pos">
 							<div class="wthree_text agileinfo_about_text">
 								<ul class="agileits_social_list">
@@ -241,12 +276,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</div>
-					<h4>Rosy Paul</h4>
-					<p>Co-Founder</p>
+					<h4>陳昱</h4>
+					<p>給力DB組</p>
 				</div>
 				<div class="col-md-3 w3_agileits_team_grid"> 
 					<div class="w3layouts_news_grid">
-						<img src="images/13.jpg" alt=" " class="img-responsive" />
+						<img src="images/10356002.jpg" alt=" " class="img-responsive" />
 						<div class="w3layouts_news_grid_pos">
 							<div class="wthree_text agileinfo_about_text">
 								<ul class="agileits_social_list">
@@ -257,8 +292,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 						</div>
 					</div>
-					<h4>Christopher Lii</h4>
-					<p>Senior Staff</p>
+					<h4>李悅閱</h4>
+					<p>優質介面組</p>
+				</div>
+				<div class="col-md-3 w3_agileits_team_grid"> 
+					<div class="w3layouts_news_grid">
+						<img src="images/10356004.jpg" alt=" " class="img-responsive" />
+						<div class="w3layouts_news_grid_pos">
+							<div class="wthree_text agileinfo_about_text">
+								<ul class="agileits_social_list">
+									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h4>謝仲齊</h4>
+					<p>給力DB組</p>
+				</div>
+				<div class="col-md-3 w3_agileits_team_grid"> 
+					<div class="w3layouts_news_grid">
+						<img src="images/10356016.jpg" alt=" " class="img-responsive" />
+						<div class="w3layouts_news_grid_pos">
+							<div class="wthree_text agileinfo_about_text">
+								<ul class="agileits_social_list">
+									<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<h4>張敏慈</h4>
+					<p>優質介面組</p>
 				</div>
 				<div class="clearfix"> </div>
 			</div>
@@ -266,59 +333,60 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 <!-- //team -->
 <!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="w3agile_footer_grids">
-				<div class="col-md-3 agileinfo_footer_grid">
-					<div class="agileits_w3layouts_footer_logo">
-						<h2><a href="/index"><span>G</span>erminate<i>Grow healthy products</i></a></h2>
-					</div>
+<div class="footer">
+	<div class="container">
+		<div class="w3agile_footer_grids">
+			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
+				<div class="agileits_w3layouts_footer_logo">
+					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
+					<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
 				</div>
-				<div class="col-md-4 agileinfo_footer_grid">
-					<h3>Contact Info</h3>
-					<h4>Call Us <span>+1234 567 891</span></h4>
-					<p>My Company, 875 Jewel Road <span>8907 Ukraine.</span></p>
-					<ul class="agileits_social_list">
-						<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-					</ul>
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">
+				<h3>聯絡資訊</h3>
+				<h4>連絡電話 <span>02-2598-6218</span></h4>
+				<p><h4>研究室地址</h4> <span style="color:#fff; font-size:15px;"> 臺北市中正區濟南路 121號,六藝樓四樓401教室</span></p>
+				<ul class="agileits_social_list">
+					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+				</ul>
+			</div> <!--
+			<div class="col-md-2 agileinfo_footer_grid agileinfo_footer_grid1">
+				<h3>Navigation</h3>
+				<ul class="w3layouts_footer_nav">
+					<li><a href="/index"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Home</a></li>
+					<li><a href="/icons"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Web Icons</a></li>
+					<li><a href="/typography"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Typography</a></li>
+					<li><a href="/contact"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 agileinfo_footer_grid">
+				<h3>Blog Posts</h3>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
 				</div>
-				<div class="col-md-2 agileinfo_footer_grid agileinfo_footer_grid1">
-					<h3>Navigation</h3>
-					<ul class="w3layouts_footer_nav">
-						<li><a href="/index"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Home</a></li>
-						<li><a href="/icons"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Web Icons</a></li>
-						<li><a href="/typography"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Typography</a></li>
-						<li><a href="/contact"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Contact Us</a></li>
-					</ul>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/2.jpg" alt=" " class="img-responsive" /></a>
 				</div>
-				<div class="col-md-3 agileinfo_footer_grid">
-					<h3>Blog Posts</h3>
-					<div class="agileinfo_footer_grid_left">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
-					</div>
-					<div class="agileinfo_footer_grid_left">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/2.jpg" alt=" " class="img-responsive" /></a>
-					</div>
-					<div class="agileinfo_footer_grid_left">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
-					</div>
-					<div class="agileinfo_footer_grid_left">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/3.jpg" alt=" " class="img-responsive" /></a>
-					</div>
-					<div class="clearfix"> </div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/3.jpg" alt=" " class="img-responsive" /></a>
 				</div>
 				<div class="clearfix"> </div>
-			</div>
-		</div>
-		<div class="w3_agileits_footer_copy">
-			<div class="container">
-				<p>© 2017 Germinate. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts.</a></p>
-			</div>
+			</div>-->
+			<div class="clearfix"> </div>
 		</div>
 	</div>
+	<div class="w3_agileits_footer_copy">
+		<div class="container">
+			<p>© 2017 Germinate. All rights reserved | Design by <a href="http://w3layouts.com">ntub107512 專題組.</a></p>
+		</div>
+	</div>
+</div>
 <!-- //footer -->
 <!-- menu -->
 	<script>
@@ -354,6 +422,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 	</script>
 <!-- //menu -->
+
+<!-- 107512 menu -->
+<script src="js/107512/menu.js"></script>
+<script src="js/107512/menu2107512.js"></script>
+
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>

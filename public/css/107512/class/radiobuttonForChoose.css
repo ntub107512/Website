@@ -1,0 +1,51 @@
+.cc-selector input{
+	margin:0;padding:0;
+	-webkit-appearance:none;
+		 -moz-appearance:none;
+					appearance:none;
+}
+
+.cc-selector-2 input{
+	margin-top: 20px;
+	position:absolute;
+	z-index:999;
+}
+
+/*.Step{background-image:url(https://i.imgur.com/ehHjXuV.png);}
+.Vid{background: url(https://i.imgur.com/ehHjXuV.png);}*/
+
+.Step{background-image:url(images/step.jpg);}
+.Vid{background: url(images/video.jpg);}
+
+.cc-selector-2 input:active +.Template-cc, .cc-selector input:active +.Template-cc{opacity: 1;}
+.cc-selector-2 input:checked +.Template-cc, .cc-selector input:checked +.Template-cc{
+	-webkit-filter: none;
+		 -moz-filter: none;
+					filter: none;
+}
+.Template-cc{
+	margin-top: 20px;
+	cursor:pointer;
+	background-size:contain;
+	background-repeat:no-repeat;
+	display:inline-block;
+	width:420px;height:294px;
+	-webkit-transition: all 100ms ease-in;
+		 -moz-transition: all 100ms ease-in;
+					transition: all 100ms ease-in;
+	-webkit-filter: brightness(1.2) grayscale(.5) opacity(1);
+		 -moz-filter: brightness(1.2) grayscale(.5) opacity(1);
+					filter: brightness(1.2) grayscale(.5) opacity(1);
+}
+.Template-cc:hover{
+	-webkit-filter: brightness(1.2) grayscale(.5) opacity(1);
+		 -moz-filter: brightness(1.2) grayscale(.5) opacity(1);
+					filter: brightness(1.2) grayscale(.5) opacity(1);
+}
+
+/* Extras */
+a:visited{color:#888}
+a{color:#444;text-decoration:none;}
+p{
+	margin-bottom:.3em;
+}

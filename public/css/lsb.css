@@ -181,7 +181,7 @@
       text-shadow: 0 0 2px #000, 0 0 20px #ffffff; }
   /* line 217, D:/yadisk/YandexDisk/web-dev/lsb-lightbox/src/lsb.scss */
   .lightspeed-box .lsb-control-text {
-    font-family: Monaco, monospace;
+    /*: Monaco, monospace;*/
     font-size: 45px;
     font-weight: bold; }
   /* line 223, D:/yadisk/YandexDisk/web-dev/lsb-lightbox/src/lsb.scss */

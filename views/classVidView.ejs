@@ -1,0 +1,1036 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>植得 | 課堂內容</title>
+	<!-- custom-theme -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Germinate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+			function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //custom-theme -->
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- js -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- //js -->	
+	
+	<link href="css/mislider.css" rel="stylesheet" type="text/css" />
+	<link href="css/mislider-custom.css" rel="stylesheet" type="text/css" />
+
+	<!-- gallery -->
+	<link href="css/lsb.css" rel="stylesheet" type="text/css">
+	<!-- //gallery -->
+	<!-- font-awesome-icons -->
+	<link href="css/font-awesome.css" rel="stylesheet"> 
+	<!-- //font-awesome-icons -->
+	<link href="//fonts.googleapis.com/earlyaccess/notosanstc.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Bree+Serif&amp;subset=latin-ext" rel="stylesheet">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	
+	<!-- 107512 menu-->
+	<link href="css/107512/menu.css" rel="stylesheet"> 
+	<link href="css/107512/menustyle107512.css" rel="stylesheet"> 
+	<link href="css/107512/menustyle107512.scss" rel="stylesheet"> 
+	
+	<!-- classVidView -->
+	
+		<!-- Magnific Popup core CSS file -->
+		<link rel="stylesheet" href="css/107512/classVidView/magnific-popup.css">
+		<link rel="stylesheet" href="css/107512/classVidView/qunit.css">
+		<link rel="stylesheet" href="css/107512/classVidView/site.css">
+		
+		<!-- Class版型 --> 
+		<link href="css/107512/courseView/courseGallery.css" rel="stylesheet">	
+		<link href="css/107512/courseView/courseView2.css" rel="stylesheet">
+		<link href="css/107512/courseView/courseView2.scss" rel="stylesheet">
+		<link rel="stylesheet" href="css/107512/class/classmain.css" />
+		
+
+
+		<link href="css/107512/classVidView/bootstrap.min.css" rel="stylesheet">
+		<link href="css/107512/class/classbuttonForEle.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/107512/classVidView/myClassVid.css" rel="stylesheet">
+		
+
+		<!-- QA -->
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="css/107512/QA/jquery-comments.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- Data -->
+		<script type="text/javascript" src="js/107512/QA/data/comments-data.js"></script>
+		
+		<style type="text/css">
+			body {
+				padding: 20px;
+				margin: 0px;
+				font-size: 14px;
+			}
+		</style>
+
+		<!-- Init jquery-comments -->
+		<script type="text/javascript">
+			$(function() {
+				var saveComment = function(data) {
+
+					// Convert pings to human readable format
+					$(data.pings).each(function(index, id) {
+						var user = usersArray.filter(function(user){return user.id == id})[0];
+						data.content = data.content.replace('@' + id, '@' + user.fullname);
+					});
+
+					return data;
+				}
+				$('#comments-container').comments({
+					profilePictureURL: 'https://viima-app.s3.amazonaws.com/media/user_profiles/user-icon.png',
+					currentUserId: 1,
+					roundProfilePictures: true,
+					textareaRows: 1,
+					enableAttachments: true,
+					enableHashtags: true,
+					enablePinging: true,
+					youText: '我',
+					textareaPlaceholderText: '留個言吧！',
+					newestText: '最新留言',
+					oldestText: '歷史留言',
+					popularText: '人氣留言',
+					attachmentsText: '檔案相關留言',
+					sendText: '留言',
+					replyText: '回覆',
+					editText: '編輯',
+					editedText: '編輯於',
+					saveText: '更新',
+					deleteText: '刪除',
+					hideRepliesText: '隱藏',
+					viewAllRepliesText: '顯示所有回覆 (__replyCount__)',
+					noCommentsText: '無留言',
+					noAttachmentsText: '無檔案附件',
+					attachmentDropText: '上傳',
+					highlightColor: '#00A925',
+					deleteButtonColor: '#C9302C',
+					enableReplying: true,
+					enableEditing: true,
+					enableUpvoting: true,
+					enableDeleting: true,
+					enableDeletingCommentWithReplies: true,
+					
+					getUsers: function(success, error) {
+						setTimeout(function() {
+							success(usersArray);
+						}, 500);
+					},
+					getComments: function(success, error) {
+						setTimeout(function() {
+							success(commentsArray);
+						}, 500);
+					},
+					postComment: function(data, success, error) {
+						setTimeout(function() {
+							success(saveComment(data));
+						}, 500);
+					},
+					putComment: function(data, success, error) {
+						setTimeout(function() {
+							success(saveComment(data));
+						}, 500);
+					},
+					deleteComment: function(data, success, error) {
+						setTimeout(function() {
+							success();
+						}, 500);
+					},
+					upvoteComment: function(data, success, error) {
+						setTimeout(function() {
+							success(data);
+						}, 500);
+					},
+					uploadAttachments: function(dataArray, success, error) {
+						setTimeout(function() {
+							success(dataArray);
+						}, 500);
+					},
+				});
+			});
+		</script>
+	<!-- //QA -->
+	
+		<link href="css/107512/font.css" rel="stylesheet">
+	<!-- //classVidView -->
+</head>
+	
+<body>
+<!-- banner -->
+	<div class="banner1">
+		<div class="container">
+			<div class="w3_agileits_banner_main_grid">
+				<div class="w3_agile_logo">
+					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
+					<img src="images/logo.png" style="height:15%; width:15%; background:#a1d034; border-radius: 15px;"></img>
+				</div>
+				<!--
+				<div class="agile_social_icons_banner">
+					<ul class="agileits_social_list">
+						<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+						<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+				-->
+				<div class="agileits_w3layouts_menu">
+					<div class="shy-menu"><!--
+						<a class="shy-menu-hamburger">
+							<span class="layer top"></span>
+							<span class="layer mid"></span>
+							<span class="layer btm"></span>
+						</a>
+						<div class="shy-menu-panel">
+							<nav class="menu menu--horatio link-effect-8" id="link-effect-8">
+								<ul class="w3layouts_menu__list">
+									<li><a href="/index">Home</a></li>
+									<li><a href="/about">About Us</a></li> 
+									<li><a href="/services">Services</a></li>
+									<li class="active"><a href="/gallery">Gallery</a></li> 
+									<li><a href="/contact">Contact Us</a></li>
+								</ul>
+							</nav>
+						</div>-->
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+
+			<!--- connect menu.css start-->
+			<div class="menu-icon107512">
+				<span class="menu-icon__line menu-icon__line-left"></span>
+				<span class="menu-icon__line"></span>
+				<span class="menu-icon__line menu-icon__line-right"></span>
+			</div>
+
+			<div class="nav107512">
+				<div class="nav__content">
+					<ul class="nav__list">
+						<li class="nav__list-item" style="text-decoration:none;"><a href="/index"><img src="images/menuhome.png" style="margin-right:7px;">首頁</img></li>
+						<li class="nav__list-item"><a href="/about"><img src="images/menuabout.png" style="margin-right:7px;">關於我們</img></li>
+						<li class="nav__list-item"><a href="/services"><img src="images/menuteach.png" style="margin-right:7px;">教學</img></li>
+						<li class="nav__list-item"><a href="/course"><img src="images/menucourse.png" style="margin-right:7px;">課程</img></li>
+						<li class="nav__list-item"><a href="/memberT"><img src="images/menuaccount.png" style="margin-right:7px;">會員</img></li>
+					</ul>
+				</div>
+			</div>
+			<!--- connect menu.css end-->
+
+		</div>
+	</div>
+<!-- banner -->
+<!-- bootstrap-pop-up -->
+	<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					Germinate
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div>
+				<section>
+					<div class="modal-body">
+						<img src="images/4.jpg" alt=" " class="img-responsive" />
+						<p>Ut enim ad minima veniam, quis nostrum 
+							exercitationem ullam corporis suscipit laboriosam, 
+							nisi ut aliquid ex ea commodi consequatur? Quis autem 
+							vel eum iure reprehenderit qui in ea voluptate velit 
+							esse quam nihil molestiae consequatur, vel illum qui 
+							dolorem eum fugiat quo voluptas nulla pariatur.
+							<i>" Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
+								esse quam nihil molestiae consequatur.</i></p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+<!-- //bootstrap-pop-up -->
+
+<!-- breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="w3layouts_breadcrumbs_left">
+				<ul>
+					<li><i class="fa fa-home" aria-hidden="true"></i><a href="/index">首頁</a><span>/</span></li>
+					<li><i class="fa fa-picture-o" aria-hidden="true"></i>課程瀏覽<span>/</span></li>
+					<li><i class="fa fa-picture-o" aria-hidden="true"></i>[課程名稱]<span>/</span></li>
+					<li><i class="fa fa-picture-o" aria-hidden="true"></i>[課堂名稱]</li>
+				</ul>
+			</div>
+			<div class="w3layouts_breadcrumbs_right">
+				<h2><%= data[0].className %></h2>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //breadcrumbs -->
+
+
+	
+	<!-- 影片課程 開始 -->
+
+	<div class="containercourseView2">
+		<div class="rowcourseView2 header">
+		 <!--.........................-->
+        <!-- 顯示資料內容開始         -->
+        <!--.........................-->				
+		
+		<h1><%= data[0].title %></h1> <!-- CONTACT US &nbsp; -->
+		<h2 class="date"><%=  myDateFormat(data[0].date) %></h2>
+		<!-- <h2 class="teacher">芭娜娜老師</h2> -->
+		</div>
+		<div class="rowcourseView2 body">
+		<form action="#">
+			<ul>
+			
+			<div class="container">
+				<div class="container-fluid">
+		<div class="row">
+		<div class="category">
+
+		</div>
+		<div class="col-md-12 classVid">
+		<!-- 
+			<h3>
+				[課堂名稱]
+			</h3>
+		-->
+			<div class="row">
+				<div class="col-md-12 colVid">
+					<video controls style="width:800px;height:500px;" poster="images/v1.jpg" >
+						<track src="devstories-en.vtt" label="English subtitles" 
+						 kind="subtitles" srclang="en" default></track>
+						<source src="video/<%= data[0].video %>" type="video/mp4">
+						您的瀏覽器不支援此 HTML5 影片標籤
+					</video>
+				</div>
+			</div>
+			
+			<p>
+				<%= data[0].word %>
+				
+			</p>
+
+
+		<!--.........................-->
+		<!-- 顯示資料內容結束         -->
+		<!--.........................-->
+
+			<!-- QA 內容-->
+			<div id="comments-container"></div>
+			
+			<!-- oldQA --> <!-- 
+			<div id="comments-container" class="jquery-comments">
+				<div class="commenting-field main">
+					<img src="https://viima-app.s3.amazonaws.com/media/user_profiles/user-icon.png" class="profile-picture round">
+					<div class="textarea-wrapper">
+						::before
+						<span class="close" style="display: block;">
+							<span class="left"></span>
+							<span class="right"></span>
+						</span>
+						<div class="textarea" data-placeholder="Add a comment" contenteditable="true" style="height: 3.65em;">
+							::before
+						</div>
+						<div class="control-row" style="display: block;">
+							<span class="send save highlight-background">Send</span>
+							<span class="enabled upload">
+								<i class="fa fa-upload">
+									::before
+								</i>
+								<input type="file" data-role="none" multiple="multiple">
+							</span>
+						</div>
+						::after
+					</div>
+					<ul class="navigation">
+						<div class="navigation-wrapper">
+							<li data-sort-key="newest" data-container-name="comments" class="active">Newest</li>
+							<li data-sort-key="oldest" data-container-name="comments">Oldest</li>
+							<li data-sort-key="popularity" data-container-name="comments">Popular</li>
+							<li data-sort-key="attachments" data-container-name="attachments">
+								<i class="fa fa-paperclip"></i>
+								"Attachments"
+							</li>
+						</div>
+						<div class="navigation-wrapper responsive">
+							<li class="title active">
+								<header>
+									"Newest"
+									::after
+								</header>
+								::after
+							</li>
+							<ul class="dropdown" style="display: none;">
+								<li data-sort-key="newest" data-container-name="comments" class="active">Newest</li>
+								<li data-sort-key="oldest" data-container-name="comments">Oldest</li>
+								<li data-sort-key="popularity" data-container-name="comments">Popular</li>
+							</ul>
+							<li data-sort-key="attachments" data-container-name="attachments">
+								<i class="fa fa-paperclip">
+									::before
+								</i>
+								"Attachments"
+							</li>
+						</div>
+					</ul>
+					<div class="data-container" data-container="comments">
+						<ul id="comment-list" class="main">
+							<li data-id="3" class="comment by-current-user">
+								<div class="comment-wrapper">
+									<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+									<time data-original="2015-01-03">2015/1/3</time>
+									<div class="name highlight-font-bold">You</div>
+									<div class="wrapper">
+										<div class="content">
+											<input class="tag ping" type="button" value="@Hank Smith" data-value="3">
+											sed posuere interdum sem. Quisque ligula eros ullamcorper 
+											
+											<a href="https://www.google.com/" target="_blank">https://www.google.com/</a> 
+											quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget 
+											<input class="tag hashtag" type="button" value="#velit" data-value="velit">.</div><span class="actions">
+												<button class="action reply" type="button">Reply</button>
+												<span class="separator">·</span>
+												<button class="action upvote highlight-font">
+													<span class="upvote-count">2</span>
+													<i class="fa fa-thumbs-up"></i>
+												</button>
+												<span class="separator">·</span>
+												<button class="action edit">Edit</button>
+											</span>
+										</div>
+									</div>
+									<ul class="child-comments">
+										<li data-id="4" class="comment">
+											<div class="comment-wrapper">
+												<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+												<time data-original="2015-01-04">2015/1/4</time>
+												<div class="name">Todd Brown</div>
+												<div class="wrapper">
+													<div class="content"><a class="attachment" href="http://www.w3schools.com/html/mov_bbb.mp4" target="_blank"><video src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" controls="controls"></video></a></div><span class="actions"><button class="action reply" type="button">Reply</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">0</span><i class="fa fa-thumbs-up"></i></button></span></div></div></li><li data-id="5" class="comment"><div class="comment-wrapper"><img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round"><time data-original="2015-01-05">2015/1/5</time><div class="name">Hank Smith<span class="reply-to"><i class="fa fa-share"></i>Todd Brown</span></div><div class="wrapper"><div class="content">Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.</div><span class="actions"><button class="action reply" type="button">Reply</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">0</span><i class="fa fa-thumbs-up"></i></button></span></div></div></li></ul></li><li data-id="2" class="comment by-admin"><div class="comment-wrapper"><img src="https://app.viima.com/static/media/user_profiles/admin-user-icon.png" class="profile-picture round"><time data-original="2015-01-02">2015/1/2</time><div class="name highlight-font-bold">Administrator</div><div class="wrapper"><div class="content">Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.</div><span class="actions"><button class="action reply" type="button">Reply</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">2</span><i class="fa fa-thumbs-up"></i></button></span></div></div><ul class="child-comments"></ul></li><li data-id="1" class="comment"><div class="comment-wrapper"><img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round"><time data-original="2015-01-01">2015/1/1</time><div class="name">Simon Powell</div><div class="wrapper"><div class="content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.</div><span class="actions"><button class="action reply" type="button">Reply</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">3</span><i class="fa fa-thumbs-up"></i></button></span></div></div><ul class="child-comments"><li class="toggle-all highlight-font-bold"><span class="text">View all 5 replies</span><span class="caret"></span></li><li data-id="6" class="comment hidden-reply"><div class="comment-wrapper"><img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round"><time data-original="2015-01-06">2015/1/6</time><div class="name">Jack Hemsworth</div><div class="wrapper"><div class="content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.</div><span class="actions"><button class="action reply" type="button">Reply</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">1</span><i class="fa fa-thumbs-up"></i></button></span></div></div></li><li data-id="7" class="comment by-admin hidden-reply"><div class="comment-wrapper"><img src="https://app.viima.com/static/media/user_profiles/admin-user-icon.png" class="profile-picture round"><time data-original="2015-01-07">2015/1/7</time><div class="name highlight-font-bold">Administrator</div><div class="wrapper"><div class="content">Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.</div><span class="actions"><button class="action reply" type="button">Reply</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">0</span><i class="fa fa-thumbs-up"></i></button></span></div></div></li><li data-id="8" class="comment by-current-user hidden-reply"><div class="comment-wrapper"><img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round"><time data-original="2015-01-08">2015/1/8</time><div class="name highlight-font-bold">You<span class="reply-to"><i class="fa fa-share"></i>Jack Hemsworth</span></div><div class="wrapper"><div class="content">Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.</div><span class="actions"><button class="action reply" type="button">Reply</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">0</span><i class="fa fa-thumbs-up"></i></button><span class="separator">·</span><button class="action edit">Edit</button></span></div></div></li><li data-id="9" class="comment"><div class="comment-wrapper"><img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round"><time data-original="2015-01-09">2015/1/9</time><div class="name">Bryan Connery<span class="reply-to"><i class="fa fa-share"></i>You</span></div><div class="wrapper"><div class="content">Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.<time class="edited" data-original="2015-01-10">Edited 2015/1/10</time></div><span class="actions"><button class="action reply" type="button">Reply</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">0</span><i class="fa fa-thumbs-up"></i></button></span></div></div></li><li data-id="10" class="comment by-current-user"><div class="comment-wrapper"><img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round"><time data-original="2015-01-10">2015/1/10</time><div class="name highlight-font-bold">You<span class="reply-to"><i class="fa fa-share"></i>Bryan Connery</span></div><div class="wrapper"><div class="content">Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.</div><span class="actions"><button class="action reply" type="button">Reply</button><span class="separator">·</span><button class="action upvote"><span class="upvote-count">0</span><i class="fa fa-thumbs-up"></i></button><span class="separator">·</span><button class="action edit">Edit</button></span></div></div></li></ul></li></ul><div class="no-comments no-data"><i class="fa fa-comments fa-2x"></i><br>No comments</div></div>
+						<span class="enabled upload inline-button">
+							<i class="fa fa-paperclip"></i>
+							<input type="file" data-role="none" multiple="multiple">
+						</span>
+						<span class="close inline-button" style="display: none;">
+							<span class="left"></span>
+							<span class="right"></span>
+						</span>
+						<div class="textarea" data-placeholder="Add a comment" contenteditable="true" style="height: 2.2em;"></div>
+						<div class="control-row" style="display: none;"><span class="send save highlight-background">Send</span>
+							<span class="enabled upload"><i class="fa fa-paperclip"></i><input type="file" data-role="none" multiple="multiple"></span>
+						</div>
+					</div>
+				</div>
+				<ul class="navigation">
+					<div class="navigation-wrapper">
+						<li data-sort-key="newest" data-container-name="comments" class="active">Newest</li>
+						<li data-sort-key="oldest" data-container-name="comments">Oldest</li>
+						<li data-sort-key="popularity" data-container-name="comments">Popular</li>
+						<li data-sort-key="attachments" data-container-name="attachments"><i class="fa fa-paperclip"></i>Attachments</li>
+					</div>
+					<div class="navigation-wrapper responsive"><li class="title active"><header>Newest</header></li>
+						<ul class="dropdown" style="display: none;">
+							<li data-sort-key="newest" data-container-name="comments" class="active">Newest</li>
+							<li data-sort-key="oldest" data-container-name="comments">Oldest</li><li data-sort-key="popularity" data-container-name="comments">Popular</li>
+						</ul>
+						<li data-sort-key="attachments" data-container-name="attachments">
+							<i class="fa fa-paperclip"></i>
+							Attachments
+						</li>
+					</div>
+				</ul>
+				<div class="data-container" data-container="comments">
+					<ul id="comment-list" class="main">
+						<li data-id="3" class="comment by-current-user">
+							<div class="comment-wrapper">
+								<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+								<time data-original="2015-01-03">2015/1/3</time>
+								<div class="name highlight-font-bold">You</div>
+								<div class="wrapper"><div class="content">
+									<input class="tag ping" type="button" data-role="none" value="@Hank Smith" data-value="3"> 
+										sed posuere interdum sem. Quisque ligula eros ullamcorper 
+										<a href="https://www.google.com/" target="_blank">https://www.google.com/</a> 
+										quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget 
+										<input class="tag hashtag" type="button" data-role="none" value="#velit" data-value="velit">.
+									</div>
+										<span class="actions">
+											<button class="action reply" type="button">Reply</button>
+											<span class="separator">·</span>
+											<button class="action upvote highlight-font">
+												<span class="upvote-count">2</span>
+												<i class="fa fa-thumbs-up"></i>
+											</button>
+											<span class="separator">·</span>
+												<button class="action edit">Edit</button>
+											</span>
+									</div>
+								</div>
+								<ul class="child-comments">
+									<li data-id="4" class="comment">
+										<div class="comment-wrapper">
+											<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+											<time data-original="2015-01-04">2015/1/4</time><div class="name">
+												Todd Brown
+												<span class="new highlight-background">
+													New
+												</span>
+											</div>
+											<div class="wrapper">
+												<div class="content">														<a class="attachment" href="http://www.w3schools.com/html/mov_bbb.mp4" target="_blank">
+															<video sc="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" controls="controls"></video>
+														</a
+													</div
+													<span class="actions">
+													<button class="action reply" type="button">
+														Reply
+													</button>
+													<span class="separator">·</span>
+													<button class="action upvote">
+														<span class="upvote-count">0</span>
+														<i class="fa fa-thumbs-up"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+									</li>
+									<li data-id="5" class="comment">
+										<div class="comment-wrapper">
+											<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+											<time data-original="2015-01-05">2015/1/5</time><div class="name">
+												Hank Smith
+												<span class="reply-to">
+													<i class="fa fa-share"></i>
+													Todd Brown
+												</span>
+												<span class="new highlight-background">
+													New
+												</span>												</div>
+												<div class="wrapper">
+												<div class="content">
+													Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.
+												</div>
+												<span class="actions">
+													<button class="action reply" type="button">Reply</button>
+													<span class="separator">·</span>
+													<button class="action upvote">
+														<span class="upvote-count">0</span>
+														<i class="fa fa-thumbs-up"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li data-id="2" class="comment by-admin">
+									<div class="comment-wrapper">
+										<img src="https://app.viima.com/static/media/user_profiles/admin-user-icon.png" class="profile-picture round">
+										<time data-original="2015-01-02">2015/1/2</time>
+										<div class="name highlight-font-bold">Administrator</div>
+										<div class="wrapper"><div class="content">
+											Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.
+										</div>
+										<span class="actions">
+											<button class="action reply" type="button">Reply</button>
+											<span class="separator">·</span>
+											<button class="action upvote">
+												<span class="upvote-count">2</span>
+												<i class="fa fa-thumbs-up"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<ul class="child-comments"></ul>
+								</li>
+							<li data-id="1" class="comment">
+								<div class="comment-wrapper">
+									<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+									<time data-original="2015-01-01">2015/1/1</time>
+									<div class="name">Simon Powell</div>
+									<div class="wrapper">
+										<div class="content">
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.
+										</div>
+										<span class="actions">
+											<button class="action reply" type="button">Reply</button>
+											<span class="separator">·</span>
+											<button class="action upvote">
+												<span class="upvote-count">3</span>
+												i class="fa fa-thumbs-up"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+								<ul class="child-comments">
+									<li class="toggle-all highlight-font-bold">
+										<span class="text">View all 5 replies</span>
+										<span class="caret"></span>
+									</li>
+									<li data-id="6" class="comment hidden-reply">
+										<div class="comment-wrapper">
+											<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+											<time data-original="2015-01-06">2015/1/6</time>
+											<div class="name">Jack Hemsworth</div>
+											<div class="wrapper">
+												<div class="content">
+													Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.
+												</div>
+												<span class="actions">
+													<button class="action reply" type="button">Reply</button>
+													<span class="separator">·</span>
+													<button class="action upvote">
+														<span class="upvote-count">1</span>
+														<i class="fa fa-thumbs-up"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+									</li>
+									<li data-id="7" class="comment by-admin hidden-reply">
+										<div class="comment-wrapper">
+											<img src="https://app.viima.com/static/media/user_profiles/admin-user-icon.png" class="profile-picture round">
+											<time data-original="2015-01-07">2015/1/7</time>
+											<div class="name highlight-font-bold">Administrator</div>
+											<div class="wrapper">
+												<div class="content">
+													Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.
+												</div>
+												<span class="actions">
+													<button class="action reply" type="button">Reply</button>
+													<span class="separator">·</span>
+													<button class="action upvote">
+														<span class="upvote-count">0</span>
+														<i class="fa fa-thumbs-up"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+									</li>
+									<li data-id="8" class="comment by-current-user hidden-reply">
+										<div class="comment-wrapper">
+											<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+											<time data-original="2015-01-08">2015/1/8</time>
+											<div class="name highlight-font-bold">
+												You
+												<span class="reply-to">
+													<i class="fa fa-share"></i>
+													Jack Hemsworth
+												</span>
+											</div>
+											<div class="wrapper">
+												<div class="content">
+													Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu.
+												</div>
+												<span class="actions">
+													<button class="action reply" type="button">Reply</button>
+													<span class="separator">·</span>
+													<button class="action upvote">
+														<span class="upvote-count">0</span>
+														<i class="fa fa-thumbs-up"></i>
+													</button>
+													<span class="separator">·</span>
+													<button class="action edit">Edit</button>
+												</span>
+											</div>
+										</div>
+									</li>
+									<li data-id="9" class="comment">
+										<div class="comment-wrapper">
+											<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+											<time data-original="2015-01-09">2015/1/9</time>
+											<div class="name">Bryan Connery
+												<span class="reply-to">
+													<i class="fa fa-share"></i>
+													You
+												</span>
+											</div>
+											<div class="wrapper">
+												<div class="content">
+													Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.
+													<time class="edited" data-original="2015-01-10">Edited 2015/1/10</time>
+												</div>
+												<span class="actions">
+													<button class="action reply" type="button">
+														Reply
+													</button>
+													<span class="separator">·</span>
+													<button class="action upvote">
+														<span class="upvote-count">0</span>
+														<i class="fa fa-thumbs-up"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+									</li>
+									<li data-id="10" class="comment by-current-user">
+										<div class="comment-wrapper">
+											<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+											<time data-original="2015-01-10">2015/1/10</time>
+											<div class="name highlight-font-bold">
+												You
+												<span class="reply-to">
+													<i class="fa fa-share"></i>
+													Bryan Connery
+												</span>
+											</div>
+											<div class="wrapper">
+												<div class="content">
+													Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.
+												</div>
+												<span class="actions">
+													<button class="action reply" type="button">Reply</button>
+													<span class="separator">·</span>
+													<button class="action upvote">
+														<span class="upvote-count">0</span>
+														<i class="fa fa-thumbs-up"></i>
+													</button>
+													<span class="separator">·</span>
+													<button class="action edit">Edit</button>
+												</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="no-comments no-data">
+							<i class="fa fa-comments fa-2x"></i>
+							<br>
+							No comments
+						</div>
+					</div>
+					<div class="data-container" data-container="attachments" style="display: none;">
+						<ul id="attachment-list" class="main">
+							<li data-id="4" class="comment">
+								<div class="comment-wrapper">
+									<img src="https://app.viima.com/static/media/user_profiles/user-icon.png" class="profile-picture round">
+									<time data-original="2015-01-04">2015/1/4</time><div class="name">
+										Todd Brown
+										<span class="new highlight-background">New</span>
+									</div>
+									<div class="wrapper">
+										<div class="content">
+											<a class="attachment" href="http://www.w3schools.com/html/mov_bbb.mp4" target="_blank">
+												<video src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" controls="controls"></video>
+											</a>
+										</div>
+										<span class="actions">
+											<button class="action reply" type="button">Reply</button>
+											<span class="separator">·</span>
+											<button class="action upvote">
+												<span class="upvote-count">0</span>
+												<i class="fa fa-thumbs-up"></i>
+											</button>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="no-attachments no-data">
+							<i class="fa fa-paperclip fa-2x"></i>
+							<br>No attachments
+						</div>
+					</div>
+
+					<div class="droppable-overlay" style="display: none;">
+						<div class="droppable-container">
+							<div class="droppable">
+								<i class="fa fa-paperclip fa-4x"></i>
+								<div>Drop files here</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			-->
+			
+			<div class="btn-group" role="group">
+				<!-- <a href="/classVidEdit">
+				<button class="btn btn-secondary" type="button">
+					編輯
+				</button> 
+				</a>
+			-->
+				<a class="popup-with-form" href="#test-form">
+				<button class="btn btn-secondary" type="button">
+					作業
+				</button> </a>
+			</div>
+				
+			
+			</div>
+			
+
+		</form>  
+		</div>
+	</div>
+	
+	<!-- 影片課程 結束 -->
+			
+<!-- gallery -->
+
+			
+
+			
+			<!-- link that opens popup -->
+				<!-- <label class="fileContainer"> <a class="popup-with-form" href="#test-form">作業</a></label> -->
+
+				<!-- form itself -->
+				<form id="test-form" class="white-popup-block mfp-hide" enctype="multipart/form-data" method="post" action="/vidHW?classNo=<%= classNo %>&classFileNo[fileNo]=<%= classFileNo %>">
+					<h2>課堂作業</h2>
+					<fieldset style="border:0;">
+						<p><%= data[0].describe %></p>
+						<ul>
+							<!-- <li> 
+								<label for="name">Name  </label>
+								<input id="name" name="name" type="text" placeholder="Name" required="">
+							</li> -->
+							<li>
+								<label for="textarea">我的想法</label><br>
+								<textarea id="textarea" style="width:100%;height:100px;" name="word" onfocus="this.select()" required/>我的想法是…</textarea>
+							</li>
+							<li>
+								<label for="textarea">附加圖片</label><br>
+								    <form id="form1" runat="server">
+										<label class="img"><input type='file' id="imgInp" targetID="blah" name="pic">選擇圖片
+										<img id="blah" style="width:100%;"/></label>
+									</form>
+							</li>
+						</ul>
+						<div class="containerbuttonview" style="margin-left:40%; margin-right:50%;">
+							<button id="buttonCreate" type="submit">建立</button>
+						</div>
+					</fieldset>
+				</form>
+			<!---------------->
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+<!-- //gallery -->
+	<script src="js/lsb.min.js"></script>
+	<script>
+	$(window).load(function() {
+		  $.fn.lightspeedBox();
+		});
+	</script>
+<!-- footer -->
+<div class="footer">
+	<div class="container">
+		<div class="w3agile_footer_grids">
+			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
+				<div class="agileits_w3layouts_footer_logo">
+					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
+				<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
+				</div>
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">
+				<h3 class="footer-h3" style="margin-left: -10%;" >聯絡資訊</h3>
+				<h4>連絡電話 <span>02-2598-6218</span></h4>
+				<p><h4>研究室地址</h4> <span style="color:#fff; font-size:15px;"> 臺北市中正區濟南路 121號,六藝樓四樓401教室</span></p>
+				<ul class="agileits_social_list">
+					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+				</ul>
+			</div> <!--
+			<div class="col-md-2 agileinfo_footer_grid agileinfo_footer_grid1">
+				<h3>Navigation</h3>
+				<ul class="w3layouts_footer_nav">
+					<li><a href="/index"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Home</a></li>
+					<li><a href="/icons"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Web Icons</a></li>
+					<li><a href="/typography"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Typography</a></li>
+					<li><a href="/contact"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 agileinfo_footer_grid">
+				<h3>Blog Posts</h3>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/2.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/3.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>-->
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="w3_agileits_footer_copy">
+		<div class="container">
+			<p>© 2017 Germinate. All rights reserved | Design by <a href="http://w3layouts.com">ntub107512 專題組.</a></p>
+		</div>
+	</div>
+</div>
+<!-- //footer -->
+<!-- menu -->
+	<script>
+		$(function() {
+			
+			initDropDowns($("div.shy-menu"));
+
+		});
+
+		function initDropDowns(allMenus) {
+
+			allMenus.children(".shy-menu-hamburger").on("click", function() {
+				
+				var thisTrigger = jQuery(this),
+					thisMenu = thisTrigger.parent(),
+					thisPanel = thisTrigger.next();
+
+				if (thisMenu.hasClass("is-open")) {
+
+					thisMenu.removeClass("is-open");
+
+				} else {			
+					
+					allMenus.removeClass("is-open");	
+					thisMenu.addClass("is-open");
+					thisPanel.on("click", function(e) {
+						e.stopPropagation();
+					});
+				}
+				
+				return false;
+			});
+		}
+	</script>
+<!-- //menu -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+
+	<!-- for classVidView working -->
+		<script src="js/107512/classVidView/jquery.min.js"></script>
+		<script src="js/107512/classVidView/bootstrap.min.js"></script>
+		<script src="js/107512/class/classbuttonForEle.js"></script>
+		
+		<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<!-- QA -->
+		
+		<script type="text/javascript">
+			$(function() {
+				var saveComment = function(data) {
+
+					// Convert pings to human readable format
+					$(data.pings).each(function(index, id) {
+						var user = usersArray.filter(function(user){return user.id == id})[0];
+						data.content = data.content.replace('@' + id, '@' + user.fullname);
+					});
+
+					return data;
+				}
+				
+			});
+		</script>
+		<!-- Data -->
+		<script type="text/javascript" src="js/107512/QA/data/comments-data.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				var saveComment = function(data) {
+
+					// Convert pings to human readable format
+					$(data.pings).each(function(index, id) {
+						var user = usersArray.filter(function(user){return user.id == id})[0];
+						data.content = data.content.replace('@' + id, '@' + user.fullname);
+					});
+
+					return data;
+				}
+		</script>
+
+		<!-- Libraries -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/1.8.0/jquery.textcomplete.js"></script>
+		<script type="text/javascript" src="js/107512/QA/jquery-comments.js"></script>
+		<script type="text/javascript" src="js/107512/QA/myQA.js"></script>
+
+
+		<!-- 107512 menu -->
+		<script src="js/107512/menu.js"></script>
+		<script src="js/107512/menu2107512.js"></script>
+		
+		<!-- Magnific Popup core JS file -->
+		<script src="js/107512/classVidView/jquery.magnific-popup.js"></script>
+		<script src="js/107512/classVidView/Gruntfile.js"></script>
+		<script src="js/107512/classVidView/popup/ajax.js"></script>
+		<script src="js/107512/classVidView/popup/core.js"></script>
+		<script src="js/107512/classVidView/popup/gallery.js"></script>
+		<script src="js/107512/classVidView/popup/Gruntfile.js"></script>
+		<script src="js/107512/classVidView/popup/iframe.js"></script>
+		<script src="js/107512/classVidView/popup/image.js"></script>
+		<script src="js/107512/classVidView/popup/inline.js"></script>
+		<script src="js/107512/classVidView/popup/retina.js"></script>
+		<script src="js/107512/classVidView/popup/zoom.js"></script>
+		<script src="js/107512/classVidView/popup/jquery-loader.js"></script>
+		<script src="js/107512/classVidView/popup/jquery.js"></script>
+		<script src="js/107512/classVidView/popup/qunit.js"></script>
+		<script src="js/107512/classVidView/popup/uglify.js"></script>
+		<script src="js/107512/classVidView/popup/zepto.js"></script>
+		<script src="js/107512/classVidView/popup/zepto.min.js"></script>
+		
+	
+	<script src="js/107512/classVidView/myClassVid.js"></script>
+	
+	<!-- //for classVidView working -->
+	
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+</body>
+</html>

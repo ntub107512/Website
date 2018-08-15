@@ -1,0 +1,52 @@
+body{
+  font-size: 25px;
+}
+img.diaryCon{ 
+  /*min-width: 150px;
+  max-width: 350px;*/
+  width: 350px;
+ /*min-height: 100px;
+  max-height: 250px;*/
+  height: auto;
+  
+  margin-top: -5px;
+  box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+  myimg:expression(onload=function(){
+	this.style.width=(this.offsetWidth > 600)?"350px":"auto"});
+}
+
+.Content{
+  border: 3px dotted rgba(253, 185, 58, 0.726);
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+div.col-md-6{
+  margin-bottom: 50px;
+  margin-top: 15px;
+  width: 105%;
+  height: 50%;
+  /*margin-right: -50px;*/
+  margin-left: -10px;
+}
+
+.img{
+  margin-top: -80px;
+  margin-bottom: 20px;
+}
+
+.content{
+  color:black;
+  text-align: left;
+  margin-top: 150px;
+  height: 50%;
+}
+
+div.col-md-12{
+	width: 100%;
+}
+
+div.col-md-6 p{
+  font-size: 18px;
+  margin-left:-15px;
+}

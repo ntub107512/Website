@@ -1,0 +1,388 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>植得 | 編輯我的日記內容</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Germinate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js"></script>
+<!-- 107512 menu -->
+<link href="css/107512/menu.css" rel="stylesheet"> 
+<link href="css/107512/menustyle107512.css" rel="stylesheet"> 
+<link href="css/107512/menustyle107512.scss" rel="stylesheet"> 
+
+
+<!-- /自己改的CSS -->
+<link href="css/107512/mainfont.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/107512/mainsetting.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/107512/107512style.css" rel="stylesheet" type="text/css" media="all" />
+
+<!-- diaryView css  -->
+<link href="css/107512/diary/diaryGallery.css" rel="stylesheet">	
+<link href="css/107512/diary/diaryView2.css" rel="stylesheet">
+<link href="css/107512/diary/diaryView2.scss" rel="stylesheet">
+
+<!-- diaryContent1 -->
+<link href="css/107512/diaryContent/bootstrap.min.css" rel="stylesheet">
+
+<!-- member plugin -->
+<link rel="stylesheet" href="css/107512/member/membermain.css" />
+
+<!-- logout button -->
+<link rel="stylesheet" type="text/css" href="css/107512/class/classbuttonForLogout.css" />
+
+<!-- font-awesome-icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+<link href="//fonts.googleapis.com/css?family=Bree+Serif&amp;subset=latin-ext" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+<!-- diaryContent2 -->
+<link href="css/107512/diaryContent/myDiaryCon.css" rel="stylesheet">
+<link href="css/107512/diaryContent/myDiaryConEdit.css" rel="stylesheet">
+
+<!-- diary -->
+
+<link href="css/107512/diary/myDiary.css" rel="stylesheet">
+
+
+
+<link href="css/107512/font.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+	
+<body>
+<!-- breadcrumbs -->
+<div class="breadcrumbs">
+	<div class="container">
+		<a href="javascript:history.back()" ><img src="images/turnback.png" style="float:left; margin-left:-370px;margin-top: 50px;" > </img></a>
+		<div class="w3layouts_breadcrumbs_left"  style="margin-top: 65px;">
+			<ul>
+				<li><i class="fa fa-home" aria-hidden="true"></i><a href="/index">首頁</a><span>/</span></li>
+				<li><i class="fa fa-envelope-o" aria-hidden="true"></i>會員</li>
+			</ul>
+		</div>
+		<div class="w3layouts_breadcrumbs_right" style=" margin-right:100px;">
+			<h2>會員</h2>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<button id="buttonlogout" onclick="javascript:location.href='/logout'" style="font-size:15px; color:#1ECD97; float:right; margin-top:-60px; margin-right:15px;">登出</button>
+</div>
+<!-- //breadcrumbs -->
+
+<!-- member  start-->
+ 			<!-- Wrapper -->
+ 				<div id="wrapper" style="width:1500px;">
+					<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/<%= data[0].spicture %>" alt="" style="width:500px; height:500px;"/></span>
+						<h1>[<%= data[0].smemName %>]</h1>
+						<p>[<%= memTitle %>]<br />
+						[簡介]</p>
+					</header>
+					<!-- Nav -->
+					<nav id="nav" style="width:1500px;"> <!--調寬 -->
+						<ul>
+							<li><a href="/memberS" >個人資料</a></li>
+							<li><a href="/careerCourseS">已參加課程</a></li>
+							<li><a href="#first"class="active">我的日記</a></li>
+						</ul>
+					</nav>
+					
+					<!-- Main -->
+						<div id="main">
+							<!-- Get Started --> 	
+								<section id="intro" class="main special">
+									<header class="major">
+										<h2>編輯我的日記 My Diary</h2>
+									</header>
+									<form role="form" method="post" enctype="multipart/form-data" action="/diaryUpdate?diaNo=<%= diaNo %>">	
+										<div class="container">
+												<div class="main-content">
+													<div class="container-fluid">
+														<div class="row" style="margin-right: -15%;">
+															<div class="col-md-12">
+																<div class="col-md-6 image">
+																	<p><div class="form-group">
+																		<div class="form-group tag">							 
+																			<label>關鍵字(tag)</label>
+																			<select class="form-control" id="tagNo" name="tagNo">   
+																				<% for(var i=0; i<diaryTagData.length; i++){ %>                     
+																					<option value="<%= diaryTagData[i].tagNo %>"><%= diaryTagData[i].tagName %></option>                                
+																				<% } %> 
+																			</select>
+																		</div>
+		
+																		<label>	今天日期 </label>
+																		<input type="date" required class="form-control" id="theDate" name="diaDate" />
+																		<script>
+																			//----------------------
+																			//設定初值為今日
+																			//----------------------
+																			var date = new Date();
+																			var day = date.getDate();
+																			var month = date.getMonth() + 1;
+																			var year = date.getFullYear();
+																			if (month < 10) month = "0" + month;
+																			if (day < 10) day = "0" + day;
+																			var today = year + "-" + month + "-" + day;       
+																			document.getElementById("theDate").value = today;
+																		</script>							
+																	</div></p>
+
+																	<!--picture plugin start -->
+																	<div class="updateProfilePicture" style="position: relative; padding-left:50px;  margin-right:100px;">
+																		<div>
+																			<label class="img"  style="margin-top: 5px;">選一張代表今天的圖片吧！</label>
+																			<label class="btn btn-info" style="float:left; color:#fff; margin-top: -5%;margin-left:33%;margin-bottom: 10px;">
+																				<input id="upload_img" style="display:none;" type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"  name="diaPic" />
+																				<i class="fa fa-photo" style="color:#fff;"></i> 上傳圖片
+																			</label>
+																		</div>
+																		<img id="blah" style="width:50%;margin-left: 23%; margin-top: 5%;"/></label>
+																	</div>
+																	<!--picture plugin end -->
+																</div>
+																
+																<div class="col-md-6 content">
+																	<p><div class="form-group">                     
+																		<label style="text-align:center">今天心情</label>  
+																		<input type="text" class="form-control" name="mood"/ >
+																		</select>                       
+																	</div></p>
+																	
+																	<p><div class="form-group">                     
+																		<label style="text-align:center">今天天氣</label>  
+																		<input type="text" class="form-control" name="weather"/ >
+																		</select>                       
+																	</div></p>
+																	
+																	<p>
+																		<label for="textarea" style="margin-left: 15px; text-align:center;">今日記事</label><br>
+																		<textarea id="textarea" style="width:100%;height:200px; margin-top: -30px; margin-left: 15px;" name="content" required /></textarea>
+																	</p>
+																</div>
+																
+													
+																	<div class="containerbuttonview" style="margin-left:40%; margin-right:50%; margin-top: 80%;">
+																		<button id="buttonCreate" style="font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;" type="submit">確定</button>
+																	</div>
+													
+															</form> 
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+						</div>
+	
+					<!-- Footer --> 
+						<footer id="footer">
+							
+						</footer>
+	
+				</div>
+<!-- member end -->
+
+	<!-- <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(33.6, 49.966667), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [	{		"featureType":"landscape",		"stylers":[			{				"hue":"#FFA800"			},			{				"saturation":0			},			{				"lightness":0			},			{				"gamma":1			}		]	},	{		"featureType":"road.highway",		"stylers":[			{				"hue":"#53FF00"			},			{				"saturation":-73			},			{				"lightness":40			},			{				"gamma":1			}		]	},	{		"featureType":"road.arterial",		"stylers":[			{				"hue":"#FBFF00"			},			{				"saturation":0			},			{				"lightness":0			},			{				"gamma":1			}		]	},	{		"featureType":"road.local",		"stylers":[			{				"hue":"#00FFFD"			},			{				"saturation":0			},			{				"lightness":30			},			{				"gamma":1			}		]	},	{		"featureType":"water",		"stylers":[			{				"hue":"#00BFFF"			},			{				"saturation":6			},			{				"lightness":8			},			{				"gamma":1			}		]	},	{		"featureType":"poi",		"stylers":[			{				"hue":"#679714"			},			{				"saturation":33.4			},			{				"lightness":-25.4			},			{				"gamma":1			}		]	}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(33.6, 49.966667),
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+        </script>
+
+-->
+<!-- footer -->
+<div class="footer">
+	<div class="container">
+		<div class="w3agile_footer_grids">
+			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
+				<div class="agileits_w3layouts_footer_logo">
+					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
+				<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
+				</div>
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">
+				<h3>聯絡資訊</h3>
+				<h4>連絡電話 <span>02-2598-6218</span></h4>
+				<p><h4>研究室地址</h4> <span style="color:#fff; font-size:15px;"> 臺北市中正區濟南路 121號,六藝樓四樓401教室</span></p>
+				<ul class="agileits_social_list">
+					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+				</ul>
+			</div> <!--
+			<div class="col-md-2 agileinfo_footer_grid agileinfo_footer_grid1">
+				<h3>Navigation</h3>
+				<ul class="w3layouts_footer_nav">
+					<li><a href="/index"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Home</a></li>
+					<li><a href="/icons"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Web Icons</a></li>
+					<li><a href="/typography"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Typography</a></li>
+					<li><a href="/contact"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 agileinfo_footer_grid">
+				<h3>Blog Posts</h3>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/2.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/3.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>-->
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="w3_agileits_footer_copy">
+		<div class="container">
+			<p>© 2017 Germinate. All rights reserved | Design by <a href="http://w3layouts.com">ntub107512 專題組.</a></p>
+		</div>
+	</div>
+</div>
+<!-- //footer -->
+
+<!-- 107512 menu -->
+<script src="js/107512/menu.js"></script>
+<script src="js/107512/menu2107512.js"></script>
+<!-- menu -->
+	<script>
+		$(function() {
+			
+			initDropDowns($("div.shy-menu"));
+
+		});
+
+		function initDropDowns(allMenus) {
+
+			allMenus.children(".shy-menu-hamburger").on("click", function() {
+				
+				var thisTrigger = jQuery(this),
+					thisMenu = thisTrigger.parent(),
+					thisPanel = thisTrigger.next();
+
+				if (thisMenu.hasClass("is-open")) {
+
+					thisMenu.removeClass("is-open");
+
+				} else {			
+					
+					allMenus.removeClass("is-open");	
+					thisMenu.addClass("is-open");
+					thisPanel.on("click", function(e) {
+						e.stopPropagation();
+					});
+				}
+				
+				return false;
+			});
+		}
+	</script>
+<!-- //menu -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+
+<!-- member plugin js -->
+<script src="js/107512/member/memberjquery.min.js"></script>
+<script src="js/107512/member/memberjquery.scrollex.min.js"></script>
+<script src="js/107512/member/memberjquery.scrolly.min.js"></script>
+<script src="js/107512/member/memberskel.min.js"></script>
+<script src="js/107512/member/memberutil.js"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="js/107512/member/membermain.js"></script>
+
+<!-- diaryView js -->
+	<script src="js/107512/classVidView/myClassVid.js"></script>
+	<script src="js/107512/diary/diaryView.js"></script>
+	<script src="js/107512/diary/myDiary.js"></script>
+
+<!-- diaryContent js -->
+<script src="js/107512/diaryContent/jquery.min.js"></script>
+<script src="js/107512/diaryContent/bootstrap.min.js"></script>
+
+</body>
+</html>

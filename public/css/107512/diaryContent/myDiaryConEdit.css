@@ -1,0 +1,25 @@
+/*選擇照片btn*/
+.img{
+	font-size: 100%;
+	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif; 
+	/*margin: 10%;*/
+	/*margin-top: 50px;*/
+	padding-top: 30px;
+}
+
+input.file{
+	padding-top: 50px;
+}
+
+/*選擇照片column*/
+#form1{
+	padding-top: 50px;
+}
+
+.tag{
+	margin-top: 30px;
+}
+
+div.container{
+	margin-left: 500px;
+}

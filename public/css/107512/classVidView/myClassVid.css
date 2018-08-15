@@ -1,0 +1,245 @@
+/*html {
+	line-height:1.5;
+	font-size:1em;
+}
+*/
+body {
+	background: #242943;
+}
+
+div.col-md-12 classVid{
+    margin:40px;
+}
+
+video { 
+    /* 讓影片可以RWD */
+    width:100%;
+    max-width:800px;
+    height:auto;
+
+    /* 讓影片置中 */
+    margin: 0 auto;
+    display: block;
+ }
+
+p{
+    font-size: 22px;
+    padding-top:10px;
+    text-align:center;
+}
+
+h3{
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+}
+
+div.btn-group{
+	
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	padding-bottom: 30px;
+	
+}
+
+h3.footer-h3{
+	text-align:left;
+	/*margin-left: -100px;*/
+}
+
+.btn-secondary{
+	color:#00A925;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+.btn-secondary:hover{
+	color:white;
+	background-color: #00A925;
+}
+
+.btn-secondary close{
+	
+}
+
+.btn-secondary close:hover{
+	background-color: white;
+
+}
+div.modal fade {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-414018{
+    text-align:center;
+    padding: 0px auto;
+    display: block;
+	text-decoration: none;
+	color:blue;
+}
+
+#modal-414018:hover{
+	color:rgb(2, 2, 143);
+}
+
+
+/* input */
+.input{
+	
+	/* needs to be relative so the :focus span is positioned correctly*/
+	position:relative;
+	
+	/* bigger font size for demo purposes*/
+	font-size: 1em;
+	
+	/* the border gradient*/
+	background: linear-gradient(21deg, #10abff, #1beabd);
+	
+	/* the width of the input border*/
+	padding: 3px;
+	
+	/* we want inline fields by default*/
+	display: inline-block;
+	
+	/* we want rounded corners no matter the size of the field*/
+	border-radius: 9999em;
+
+	/* style of the actual input field*/
+    *:not(span) {
+		position: relative;
+		display: inherit;
+		border-radius: inherit;
+		margin: 0;
+		border: none;
+		outline: none;
+		padding: 0 .325em;
+		z-index: 1; /* needs to be above the :focus span*/
+		
+		/* summon fancy shadow styles when focussed*/
+		:focus + span {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+	
+	/* we don't animate box-shadow directly as that can't be done on the GPU, only animate opacity and transform for high performance animations.*/
+	span {
+		
+		transform: scale(.993, .94); /* scale it down just a little bit*/
+		transition: transform .5s, opacity .25s;
+		opacity: 0; /* is hidden by default*/
+		
+		position:absolute;
+		z-index: 0; /* needs to be below the field (would block input otherwise)*/
+		margin:4px; /* a bit bigger than .input padding, this prevents background color pixels shining through*/
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		border-radius: inherit;
+		pointer-events: none; /* this allows the user to click through this element, as the shadow is rather wide it might overlap with other fields and we don't want to block those.*/
+		
+		/* fancy shadow styles*/
+		box-shadow: inset 0 0 0 3px #fff,
+			0 0 0 4px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	}
+	
+}
+
+div.modal-input input {
+	font-family: inherit;
+	line-height:inherit;
+	color:#2e3750;
+	min-width:1em;
+} 
+
+::placeholder {
+	color:#cbd0d5;
+}
+
+
+/*Homework Form版型調整*/
+a.popup-with-form{
+	color: white;
+	text-decoration:none;
+}
+
+#test-form p{
+	text-align: center;
+}
+
+#test-form h2{
+	text-align: center;
+	color: #00A925;
+}
+#test-form label{
+	font-size: 100%;
+	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif; 
+	/*display: none;*/
+}
+
+/*選擇圖片btn*/
+label.img{
+	cursor: pointer;
+	color:white;
+	background-color:#19AE7D;
+	border: 5px solid #19AE7D;
+    border-radius: 5px;
+	margin-bottom: 15px;
+	font-weight:10;
+	text-align:center;
+	padding-bottom:25px;
+	font-size: 50px;
+}
+
+label.img [type=file] {
+	cursor: pointer;
+	color:white;
+    font-size: 50px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: relative;
+    top: 0;
+}
+
+/*送出btn調整*/
+div.containerbuttonview{
+	margin-left:50%;
+}
+
+/*課堂標題 日期調整*/
+.rowcourseView2.header h2 {
+	margin:0;
+	border-bottom: 0px;
+  }
+
+.w3layouts_breadcrumbs_right{
+	border-bottom: 0px;
+}
+
+/*.rowcourseView2.header h2.teacher {
+	position: relative;
+	margin-bottom: 50%;
+	padding-bottom: 28%;
+	margin-top: -30px;
+	margin-left: 28%;
+}*/
+  
+
+/*footer*/
+div.col-md-4 agileinfo_footer_grid h3{
+	font-size: 28px;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Arbutus+Slab');
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+#buttonCreate{
+	font-size: 18px;
+	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;
+}

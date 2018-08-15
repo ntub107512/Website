@@ -1,5 +1,5 @@
-$background--color:#1e2023;
-$icon--color:#1e2023;
+$background--color:#FF0000;
+$icon--color:#FF0000;
 $font--color:#ffffff;
 $font--color--active:#000000;
 $font--primary:'Fira Sans', sans-serif;
@@ -132,4 +132,9 @@ body.nav107512-active{
 			}
 		}
 	}
+}
+
+/* self */
+.nav__list li{
+	color:#000;
 }
