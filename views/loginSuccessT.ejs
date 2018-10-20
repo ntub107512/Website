@@ -12,8 +12,10 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="http://wow.techbrood.com/libs/jquery/jquery-1.11.1.min.js"></script>
 
 <title>植得 | 登入成功</title>
+<link rel="Shortcut Icon" type="image/x-icon" href="images/logoHead.png" style="height:200%; width:200%;"/>
 
 <meta name="description" content="Source code generated using layoutit.com">
 <meta name="author" content="LayoutIt!">
@@ -37,6 +39,7 @@
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
 <link href="css/107512/font.css" rel="stylesheet">
+<link href="css/107512/107512style.css" rel="stylesheet">
 
 <!-- button -->
 <link href="css/107512/class/classbutton.css" rel="stylesheet" type="text/css" media="all" />
@@ -77,8 +80,19 @@
         <!------------------------------>                 
         <div class="row" style="margin-top:125px; margin-bottom:50px;">
             <div class="col-md-12" style="padding:150px 200px 150px 200px;">
+					
 				<div class="jumbotron">
-					<h4 class="userName" >哈囉, <%= memNo %>[<%= tmemName %>] 身分:<%= memTitle %></h4>
+						<div class="tableforplant">
+								<div class="bowl">
+									<div class="cable">
+										<div class="leaf-1"></div>
+										<div class="leaf-2"></div>
+										<div class="leaf-3"></div>
+										<div class="leaf-4"></div>
+									</div>
+								</div>
+						</div>
+					<h4 class="userName" >哈囉, <%= memNo %> <%= tmemName %> 身分:<%= memTitle %></h4>
 					<h2 class="actResult" style="margin-top:20px;">登入成功!</h2>
 					<a href="/memberT"><button id="buttonview" style="font-size:20px; float:right; width:150px;">我的會員</button></a>
 					<a href="/index"><button id="buttonview" style="font-size:20px; float:right; width:150px; margin-right:10px;">回首頁</button></a>
@@ -116,7 +130,9 @@
 				<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
 					<div class="agileits_w3layouts_footer_logo">
 						<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-					<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
+						
+						<img src="images/logo.png" style="height:80%; width:80%; float:right;"></img>
+					<!-- <img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img> -->
 					</div>
 				</div>
 				<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">

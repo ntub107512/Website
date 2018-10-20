@@ -58,24 +58,52 @@ router.get('/', function(req, res, next) {
   //------------------------------------------
     var memNo=req.session.memNo;
     var className=req.query.className;
-    var describe=req.query.describe.describe;
-    pool.query('select count(*) as cnt from classfile',  function(err, results) {
-        if (err)throw err;
+    var chooses;
+    var classNo;
+    console.log(className)
+    pool.query('select * from class where className=?',[className],  function(err, results) {
+        chooses=results[0].choose;
+        console.log(chooses)
+    if(chooses=="Vid"){
+          pool.query('select count(*) as cnt from classfile',  function(err, results) {
+            if (err)throw err;
+            console.log("進入video");
+            var totalLine=results[0].cnt;
+            var totalPage=Math.ceil(totalLine/linePerPage);
 
-        var totalLine=results[0].cnt;
-        var totalPage=Math.ceil(totalLine/linePerPage);
+            pool.query('select a.*,b.* from class a,classfile b where a.className=? AND a.classNo=b.classNo limit ?, ?',[className,(pageNo-1)*linePerPage, linePerPage], function(err, results) {
+                if (err) {
+                    res.render('addFail', {});
+                }else{
 
-        pool.query('select a.*,b.* from class a,classfile b where a.className=? AND a.classNo=b.classNo limit ?, ?',[className,(pageNo-1)*linePerPage, linePerPage], function(err, results) {
-            if (err) {
-                res.render('addFail', {});
-            }else{
+                console.log(results.length);
+                console.log(results);
+                    var recordNo=(pageNo-1)*linePerPage+1;
+                    res.render('courseViewT', {data:results, pageNo:pageNo, totalLine:totalLine, totalPage:totalPage, startPage:startPage, linePerPage:linePerPage, navSegments:navSegments,memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,className:className});   
+                }
+            }); 
+        });
+    }else if(chooses=="Step"){
+        pool.query('select count(*) as cnt from classfile',  function(err, results) {
+            if (err)throw err;
+            console.log("進入Step");
+            var totalLine=results[0].cnt;
+            var totalPage=Math.ceil(totalLine/linePerPage);
 
-              console.log(results.length);
+            pool.query('select a.*,b.* from class a,classfile b where a.className=? AND a.classNo=b.classNo limit ?, ?',[className,(pageNo-1)*linePerPage, linePerPage], function(err, results) {
+                if (err) {
+                    res.render('addFail', {});
+                }else{
+                classNo=results[0].classNo;
+                console.log(results.length);
+                console.log(results);
                 var recordNo=(pageNo-1)*linePerPage+1;
-                res.render('courseViewT', {data:results, pageNo:pageNo, totalLine:totalLine, totalPage:totalPage, startPage:startPage, linePerPage:linePerPage, navSegments:navSegments,memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,className:className,describe:describe});   
-            }
-        }); 
-    }); 
-});
+                res.render('courseViewStepT', {data:results, pageNo:pageNo, totalLine:totalLine, totalPage:totalPage, startPage:startPage, linePerPage:linePerPage, navSegments:navSegments,memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,className:className,classNo:classNo});   
+                }
+            }); 
+        });
 
+    }
+});
+});
 module.exports = router;                     

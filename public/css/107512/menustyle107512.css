@@ -35,7 +35,7 @@
   content: "";
   position: fixed;
   width: 100vw;
-  height: 20vh; /*menu 高度*/
+  height: 18vh; /*menu 高度*/
   margin:-100px;
   margin-right:500px;
   
@@ -118,7 +118,7 @@
   transition: opacity .2s ease, transform .3s ease;
   transition: opacity .2s ease, transform .3s ease, -webkit-transform .3s ease;
   margin-right: 50px;
-  font-size:40px; /*menu字型大小*/
+  font-size:32px; /*menu字型大小*/
   color:#000;
 }
 .nav__list-item:before { /* menu連結的底線 */

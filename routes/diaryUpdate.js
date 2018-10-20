@@ -36,12 +36,12 @@ var storage = multer.diskStorage({
 //-----------------------------------------------
 // 產生multer的上傳物件
 //-----------------------------------------------
-var maxSize=800*1024;  //設定最大可接受圖片大小(800K)
+var maxSize=3000*3000;  //設定最大可接受圖片大小(800K)
 
 var upload = multer({
     storage:storage,
     limits:{ fileSize: maxSize }
-}).single('diaPic');  //表單中的檔案名稱
+}).single('conPic');  //表單中的檔案名稱
 
 
 
@@ -56,8 +56,8 @@ router.post('/', function(req, res) {
     }     
    //傳到diary值
     var tagNo=req.param("tagNo");
-    var diaDate=req.param("diaDate");
-    var diaPic='';
+    var conDate=req.param("conDate");
+    var conPic='';
     var mood=req.param("mood");
     var weather=req.param("weather");
     var content=req.param("content");
@@ -66,19 +66,19 @@ router.post('/', function(req, res) {
     //var content=req.param("content");
 
     var memNo=req.session.memNo;
-    var diaNo=req.query.diaNo;
+    var pageNo=req.query.pageNo;
 
     var memTitle=req.session.memTitle;
 
     console.log("----------------------");
-    console.log(diaNo);
+    console.log(pageNo);
     console.log("----------------------");
 	// 如果有選擇圖片
     if (typeof req.file != 'undefined'){
-        diaPic=req.file.filename;   //取得上傳照片新名稱             
+        conPic=req.file.filename;   //取得上傳照片新名稱             
     
    
-    pool.query('UPDATE diary SET tagNo=?, diaDate=?, diaPic=?, mood=?, content=?,weather=? where diaNo=? AND memNo=?', [tagNo, diaDate, diaPic, mood, content, weather,diaNo,memNo],function(err, rows, fields) {
+    pool.query('UPDATE diacontent SET conDate=?, conPic=?, mood=?, content=?,weather=? where pageNo=?', [conDate, conPic, mood, content, weather,pageNo],function(err, rows, fields) {
         if (err){
             //刪除先前已上傳的圖片
             diaPic='public/images/' + diaPic;

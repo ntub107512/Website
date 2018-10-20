@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
   }else{
     var classNo=req.query.classNo;
     var classFileNo=req.query.classFileNo.fileNo;
-    pool.query('select * from cfvid where classFileNo=?',[classFileNo], function (err, results) {
+    pool.query('select a.*,b.* from cfvid a,classfile b where a.classFileNo=? and b.classFileNo=?',[classFileNo,classFileNo], function (err, results) {
       if (err){
           res.render('courseLock', {});
       }else{

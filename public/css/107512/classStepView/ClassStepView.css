@@ -1,4 +1,13 @@
-
+.galleryWrapper1{
+  background-color: #fff;
+  margin-top: -50px;
+}
+.galleryWrapper{
+  background-color: #fff;
+}
+.classStepWords{
+  padding-bottom: 40px;
+}
 .imageCaption {
   line-height: 1.4;
 }
@@ -178,13 +187,14 @@
 .buttonStep {
   display: inline-block;
   margin: auto;
-  width: 75px;
+  width: 90px;
   height: 50px;
   border: none;
   background: #1abc9c;
   position: relative;
   overflow: hidden;
 }
+
 .buttonStep:before {
   content: '';
   background: #148f77;

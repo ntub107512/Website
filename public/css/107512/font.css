@@ -6,3 +6,7 @@ html, body{
 	font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;
 	margin: 0;
 }
+.test1{
+	white-space: nowrap;
+	display:inline;
+}

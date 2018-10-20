@@ -7,7 +7,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>植得 | 新增我的日記內容</title>
+<title>植得 | 建立種植日記小書</title>
+<link rel="Shortcut Icon" type="image/x-icon" href="images/logoHead.png" style="height:200%; width:200%;"/>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Germinate Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //custom-theme -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -74,32 +83,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h2>會員</h2>
 		</div>
 		<div class="clearfix"> </div>
-	</div><button id="buttonlogout" onclick="javascript:location.href='/logout'" style="font-size:15px; color:#1ECD97; float:right; margin-top:-60px; margin-right:15px;">登出</button>
-
+	</div>
+	<button id="buttonlogout" onclick="javascript:location.href='/logout'" style="font-size:15px; color:#1ECD97; float:right; margin-top:-60px; margin-right:15px;">登出</button>
 </div>
 <!-- //breadcrumbs -->
 
 <!-- member  start-->
  			<!-- Wrapper -->
- 				<div id="wrapper" style="width:1500px;">
+ 				<div id="wrapper"  style="width:1500px;">
 	
-					<!-- Header -->
+						<!-- Header -->
 						<header id="header" class="alt">
-							<span class="logo"><img src="images/<%= data[0].picture %>" alt="" style="height:500px; width:500px;"/></span>
-							<h1>[<%= data[0].tmemName %>]</h1>
-							<p>[<%= memTitle %>]<br />
-							[簡介]</p>
-						</header>
-	
+							<span class="logo"><img src="images/<%= data[0].picture %>" alt="" style="width:500px; height:500px;"/></span>
+							<h1><%= data[0].tmemName %></h1>
+							<p><%= memTitle %><br /></p>
+						  </header>
 					<!-- Nav -->
-						<nav id="nav" style="width:1500px;">
+						<nav id="nav"  style="width:1500px;">
 							<ul>
-								<li><a href="/memberT">個人資料</a></li>
-								<li><a href="/careerCourse">已發起課程</a></li>
-								<li><a href="/careerHW">待批改作業</a></li>
-								<li><a href="/careerHWcorrect">已批改作業</a></li>
+								<li><a href="/member">個人資料</a></li>
+								<li><a href="/careerHW">已發起課程</a></li>
 								<li><a href="#intro" class="active">我的日記</a></li>
-								<li><img src="images/college-sign.png" style="width:80px; height:80px; float:right;"></li>
 							</ul>
 						</nav>
 	
@@ -108,26 +112,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!-- Get Started --> 	
 								<section id="intro" class="main special">
 									<header class="major">
-										<h2>新增我的日記 My Diary</h2>
+										<h2>建立種植小書 My Diary Book</h2>
 									</header>
-									<form role="form" method="post" enctype="multipart/form-data" action="/diaryAdd">	
+									<form role="form" method="post" enctype="multipart/form-data" action="/diaryBookAdd">	
 										<div class="container">
 												<div class="main-content">
 													<div class="container-fluid">
-														<div class="row">
+														<div class="row" style="margin-right: -20%;">
 															<div class="col-md-12">
 																<div class="col-md-6 image">
 																	<p><div class="form-group">
-																		<div class="form-group tag">							 
+																		<div class="form-group tag">
+																								 
 																			<label>關鍵字(tag)</label>
-																			<select class="form-control" id="tagNo" name="tagNo">   
-																				<% for(var i=0; i<diaryTagData.length; i++){ %>                     
-																					<option value="<%= diaryTagData[i].tagNo %>"><%= diaryTagData[i].tagName %></option>                                
-																				<% } %> 
+																			<select class="form-control" id="tagNo" name="tagNo" style="font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;">   
+																					<% for(var i=0; i<diaryTagData.length; i++){ %>                     
+																							<option value="<%= diaryTagData[i].tagNo %>"><%= diaryTagData[i].tagName %></option>                                
+																						<% } %> 
 																			</select>
+																		
 																		</div>
 		
-																		<label>	建立日期 </label>
+																		<label>今天日期</label>
 																		<input type="date" required class="form-control" id="theDate" name="diaDate" />
 																		<script>
 																			//----------------------
@@ -145,10 +151,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 																	</div></p>
 
 																	<!--picture plugin start -->
-																	<div class="updateProfilePicture" style="position: relative; padding-left:50px;  margin-right:100px;">
+																	<div class="updateProfilePicture" style="position: relative; padding-left:50px;  margin-right:60px;">
 																		<div>
-																			<label class="img"  style="margin-top: 5px;">選一張代表小書的圖片吧！</label>
-																			<label class="btn btn-info" style="float:left; color:#fff; margin-top: -5%;margin-left:33%; margin-bottom: 10px;">
+																			<label class="img"  style="margin-top: -40px; margin-bottom:25px;">選一張代表今天的圖片吧！</label>
+																			<label class="btn btn-info" style="float:left; color:#fff; margin-top: -2%;margin-left:37%; margin-bottom: 10px;">
 																				<input id="upload_img" style="display:none;" type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"  name="diaPic" />
 																				<i class="fa fa-photo" style="color:#fff;"></i> 上傳圖片
 																			</label>
@@ -160,34 +166,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 																
 																<div class="col-md-6 content">
 																	<p><div class="form-group">                     
-																		<label style="text-align:center">今天名稱</label>  
-																		<input type="text" class="form-control" name="mood"/ >
+																		<label style="text-align:center">小書名稱</label>  
+																		<input type="text" class="form-control" name="title"/ >
 																		</select>                       
-																	</div></p>
+																	</div></p>															
 																	
-																	<!--
-																	<p><div class="form-group">                     
-																		<label style="text-align:center">今天天氣</label>  
-																		<input type="text" class="form-control" name="weather"/ >
-																		</select>                       
-																	</div></p>
-																	-->
 																	<p>
 																		<label for="textarea" style="margin-left: 15px; text-align:center;">小書敘述</label><br>
-																		<textarea id="textarea" style="width:100%;height:200px; margin-top: -30px; margin-left: 15px;" name="content" required /></textarea>
+																		<textarea id="textarea" style="width:95%;height:200px; margin-top: -30px; margin-left: 15px;" name="content" required /></textarea>
 																	</p>
 																</div>
 																
 													
-																	<div class="containerbuttonview" style="margin-left:40%; margin-right:50%; ">
-																		<button id="buttonCreate" style="font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif; margin-top:100% ;" type="submit">確定</button>
+																	<div class="containerbuttonview" style="margin-left:45%; margin-right:55%; margin-top: 50%;">
+																		<button id="buttonCreate" style="font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;" type="submit">確定</button>
 																	</div>
 													
 															</form>  
-														
-														</div>
-													</div>
-													
 												</div>
 											</div>
 										</div>
@@ -197,48 +192,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	
 					<!-- Footer --> 
 						<footer id="footer">
-							
+						
 						</footer>
 	
 				</div>
 <!-- member end -->
 
-	<!-- <script type="text/javascript">
-            // When the window has finished loading create our google map below
-            google.maps.event.addDomListener(window, 'load', init);
-        
-            function init() {
-                // Basic options for a simple Google Map
-                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-                var mapOptions = {
-                    // How zoomed in you want the map to start at (always required)
-                    zoom: 11,
-
-                    // The latitude and longitude to center the map (always required)
-                    center: new google.maps.LatLng(33.6, 49.966667), // New York
-
-                    // How you would like to style the map. 
-                    // This is where you would paste any style found on Snazzy Maps.
-                    styles: [	{		"featureType":"landscape",		"stylers":[			{				"hue":"#FFA800"			},			{				"saturation":0			},			{				"lightness":0			},			{				"gamma":1			}		]	},	{		"featureType":"road.highway",		"stylers":[			{				"hue":"#53FF00"			},			{				"saturation":-73			},			{				"lightness":40			},			{				"gamma":1			}		]	},	{		"featureType":"road.arterial",		"stylers":[			{				"hue":"#FBFF00"			},			{				"saturation":0			},			{				"lightness":0			},			{				"gamma":1			}		]	},	{		"featureType":"road.local",		"stylers":[			{				"hue":"#00FFFD"			},			{				"saturation":0			},			{				"lightness":30			},			{				"gamma":1			}		]	},	{		"featureType":"water",		"stylers":[			{				"hue":"#00BFFF"			},			{				"saturation":6			},			{				"lightness":8			},			{				"gamma":1			}		]	},	{		"featureType":"poi",		"stylers":[			{				"hue":"#679714"			},			{				"saturation":33.4			},			{				"lightness":-25.4			},			{				"gamma":1			}		]	}]
-                };
-
-                // Get the HTML DOM element that will contain your map 
-                // We are using a div with id="map" seen below in the <body>
-                var mapElement = document.getElementById('map');
-
-                // Create the Google Map using our element and options defined above
-                var map = new google.maps.Map(mapElement, mapOptions);
-
-                // Let's also add a marker while we're at it
-                var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(33.6, 49.966667),
-                    map: map,
-                    title: 'Snazzy!'
-                });
-            }
-        </script>
-
--->
+	
 <!-- footer -->
 <div class="footer">
 	<div class="container">
@@ -246,8 +206,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
 				<div class="agileits_w3layouts_footer_logo">
 					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-				<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
-				</div>
+				<!-- <img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img> -->
+				<img src="images/logo.png" style="height:80%; width:80%; float:right;"></img>
+				</div> 
 			</div>
 			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">
 				<h3>聯絡資訊</h3>
@@ -259,7 +220,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
 				</ul>
-			</div>
+			</div> 
 			<div class="clearfix"> </div>
 		</div>
 	</div>

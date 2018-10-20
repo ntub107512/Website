@@ -8,6 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 <head>
 <title>植得 | 編輯我的日記內容</title>
+<link rel="Shortcut Icon" type="image/x-icon" href="images/logoHead.png" style="height:200%; width:200%;"/>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -94,17 +95,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- Header -->
 						<header id="header" class="alt">
 							<span class="logo"><img src="images/<%= data[0].picture %>" alt="" style="width:500px; height:500px;"/></span>
-							<h1>[<%= data[0].tmemName %>]</h1>
-							<p>[<%= memTitle %>]<br />
-							[簡介]</p>
+							<h1><%= data[0].tmemName %></h1>
+							<p><%= memTitle %><br /></p>
 						  </header>
 					<!-- Nav -->
 						<nav id="nav"  style="width:1500px;">
 							<ul>
 								<li><a href="/member">個人資料</a></li>
-								<li><a href="/careerCourse">已發起課程</a></li>
-								<li><a href="/careerHW">待批改作業</a></li>
-								<li><a href="/careerHWcorrect">已批改作業</a></li>
+								<li><a href="/careerHW">已發起課程</a></li>
 								<li><a href="#intro" class="active">我的日記</a></li>
 							</ul>
 						</nav>
@@ -116,25 +114,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<header class="major">
 										<h2>編輯我的日記 My Diary</h2>
 									</header>
-									<form role="form" method="post" enctype="multipart/form-data" action="/diaryUpdate?diaNo=<%= diaNo %>">	
+									<form role="form" method="post" enctype="multipart/form-data" action="/diaryUpdate?pageNo=<%= pageNo %>">	
 										<div class="container">
 												<div class="main-content">
 													<div class="container-fluid">
-														<div class="row" style="margin-right: -15%;">
+														<div class="row" style="margin-right: -20%;">
 															<div class="col-md-12">
 																<div class="col-md-6 image">
 																	<p><div class="form-group">
 																		<div class="form-group tag">							 
 																			<label>關鍵字(tag)</label>
-																			<select class="form-control" id="tagNo" name="tagNo">   
-																				<% for(var i=0; i<diaryTagData.length; i++){ %>                     
-																					<option value="<%= diaryTagData[i].tagNo %>"><%= diaryTagData[i].tagName %></option>                                
-																				<% } %> 
+																			<select class="form-control" id="tagNo" name="tagNo" style="font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;">                        
+																					<option value="<%= diaryTagData[0].tagNo %>"><%= diaryTagData[0].tagName %></option>                                
+																				
 																			</select>
 																		</div>
 		
 																		<label>	今天日期 </label>
-																		<input type="date" required class="form-control" id="theDate" name="diaDate" />
+																		<input type="date" required class="form-control" id="theDate" name="conDate" />
 																		<script>
 																			//----------------------
 																			//設定初值為今日
@@ -155,7 +152,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																		<div>
 																			<label class="img"  style="margin-top: 5px;">選一張代表今天的圖片吧！</label>
 																			<label class="btn btn-info" style="float:left; color:#fff; margin-top: -5%;margin-left:33%;margin-bottom: 10px;">
-																				<input id="upload_img" style="display:none;" type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"  name="diaPic" />
+																				<input id="upload_img" style="display:none;" type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"  name="conPic" />
 																				<i class="fa fa-photo" style="color:#fff;"></i> 上傳圖片
 																			</label>
 																		</div>
@@ -167,24 +164,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 																<div class="col-md-6 content">
 																	<p><div class="form-group">                     
 																		<label style="text-align:center">今天心情</label>  
-																		<input type="text" class="form-control" name="mood"/ >
+																		<input type="text" class="form-control" name="mood" placeholder="<%= data[0].mood %>"/ >
 																		</select>                       
 																	</div></p>
 																	
 																	<p><div class="form-group">                     
 																		<label style="text-align:center">今天天氣</label>  
-																		<input type="text" class="form-control" name="weather"/ >
+																		<input type="text" class="form-control" name="weather" placeholder="<%= data[0].weather %>"/ >
 																		</select>                       
 																	</div></p>
 																	
 																	<p>
 																		<label for="textarea" style="margin-left: 15px; text-align:center;">今日記事</label><br>
-																		<textarea id="textarea" style="width:100%;height:200px; margin-top: -30px; margin-left: 15px;" name="content" required /></textarea>
+																		<textarea id="textarea" style="width:100%;height:200px; margin-top: -30px; margin-left: 15px;" name="content" required /><%= data[0].content %></textarea>
 																	</p>
 																</div>
 																
 													
-																	<div class="containerbuttonview" style="margin-left:40%; margin-right:50%; margin-top: 80%;">
+																	<div class="containerbuttonview" style="margin-left:45%; margin-right:55%; margin-top: 50%;">
 																		<button id="buttonCreate" style="font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;" type="submit">確定</button>
 																	</div>
 													
@@ -247,7 +244,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
 				<div class="agileits_w3layouts_footer_logo">
 					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-				<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
+				<!-- <img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img> -->
+				<img src="images/logo.png" style="height:80%; width:80%; float:right;"></img>
 				</div>
 			</div>
 			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">

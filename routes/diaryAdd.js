@@ -41,7 +41,7 @@ var maxSize=800*1024;  //設定最大可接受圖片大小(800K)
 var upload = multer({
     storage:storage,
     limits:{ fileSize: maxSize }
-}).single('diaPic');  //表單中的檔案名稱
+}).single('conPic');  //表單中的檔案名稱
 
 
 
@@ -54,47 +54,45 @@ router.post('/', function(req, res) {
         res.render('picFileSizeFail',{});
         return
     }     
-   //傳到diary值
-    var tagNo=req.param("tagNo");
-    var diaDate=req.param("diaDate");
-    var diaPic='';
+  //到diaContent的值
+    var conDate=req.param("conDate");
+    var conPic='';
     var mood=req.param("mood");
     var weather=req.param("weather");
     var content=req.param("content");
+    var diaNo=req.query.diaNo;
+
     var memNo=req.session.memNo;
-  //到diaContent的值
-    var content=req.param("content")
 
 	// 如果有選擇圖片
     if (typeof req.file != 'undefined'){
-        diaPic=req.file.filename;   //取得上傳照片新名稱             
+        conPic=req.file.filename;   //取得上傳照片新名稱             
     }
-    //建立一個新資料物件
-    var diaryData={
-        tagNo:tagNo,
-        diaDate:diaDate,
-        diaPic:diaPic,
+    //建立一個新資料物件  
+    var contentData={
+        conDate:conDate,
         mood:mood,
         weather:weather,
+        conPic:conPic,
         content:content,
-        memNo:memNo
+        diaNo:diaNo
     }	
 //建立一個新資料物件
    /*var diaConData={
     tagNo:tagNo,
    
   }	*/
-    pool.query('INSERT INTO diary SET ?', diaryData, function(err, rows, fields) {
+    pool.query('INSERT INTO diacontent SET ?', contentData, function(err, rows, fields) {
         if (err){
             //刪除先前已上傳的圖片
-            diaPic='public/images/' + diaPic;
-				fs.unlink(diaPic, (err) => {
+            conPic='public/images/' + conPic;
+				fs.unlink(conPic, (err) => {
 					if (err) console.log('圖片檔尚未上傳');
 					console.log('已刪除圖片檔');
 				});		
             res.render('diaryAddFail', {});     //新增失敗
         }else{
-            res.render('diaryAddSuccess', {});  //新增成功
+            res.render('diaryAddSuccess', {});
         }
         });
     })

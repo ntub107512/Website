@@ -8,6 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 <head>
 <title>植得 | 建立課程</title>
+<link rel="Shortcut Icon" type="image/x-icon" href="images/logoHead.png" style="height:200%; width:200%;"/>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,12 +26,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="ckeditor/ckeditor.js"></script>
 <script src="js/107512/datepicker"></script>
 
-<!-- 107512 menu -->
-<link href="css/107512/menu.css" rel="stylesheet"> 
-<link href="css/107512/menustyle107512.css" rel="stylesheet"> 
-<link href="css/107512/class/.scss" rel="stylesheet"> 
-
-
 <!-- /自己改的CSS -->
 <link href="css/107512/mainfont.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/107512/mainsetting.css" rel="stylesheet" type="text/css" media="all" />
@@ -38,11 +33,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/107512/class/classbutton.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/107512/class/radiobuttonForChoose.css" rel="stylesheet" type="text/css" media="all" />
 
+
+
 <!-- font-awesome-icons -->
 <link href="css/font-awesome.css" rel="stylesheet"> 
 <!-- //font-awesome-icons -->
 <link href="//fonts.googleapis.com/css?family=Bree+Serif&amp;subset=latin-ext" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+
+
+<!-- 107512 menu -->
+<link href="css/107512/menu.css" rel="stylesheet"> 
+<link href="css/107512/menustyle107512.css" rel="stylesheet"> 
+<link href="css/107512/class/.scss" rel="stylesheet"> 
+<link rel="stylesheet" href="css/107512/courseCreate/ClassCreateHover.css">
 
 <!-- //datepicker -->
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -114,7 +119,7 @@ $(function() {
 
 				<div class="w3_agile_logo" >
 					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-					<img src="images/logo.png" style="height:15%; width:15%; background:#a1d034; border-radius: 15px;"></img>
+					<img src="images/logo.png" style="height:20%; width:20%; float:right;"></img>
 				</div>
 
 				
@@ -224,115 +229,103 @@ $(function() {
 				<img src="images/1.png" alt=" " class="img-responsive" />
 			</div>
 			<p class="agile_para contactTitle1">作為自然共學的小小老師，就從這一步開始 ! .</p>
-			<div class="w3ls_news_grids" style="margin-left:8%;  width:1000px;">
-				<div class="col-md-10 w3_agile_mail_left" style="width:1000px;">
-					<div class="agileits_mail_grid_right1 agile_mail_grid_right1"
+			
+				
+					<div class="agileits_mail_grid_right1 agile_mail_grid_right1 Grayzone">
 							<p class="contactTitle2">建立課程基本資料 !</p>
+
 						<form role="form" enctype="multipart/form-data" method="post" action="/courseAdd" >
-							<span>
-								<i>課程名稱</i>
-								<input type="text" name="className" placeholder=" " required=""  autocomplete="off">
-							</span>
-							<span>
-								<i>開始日期</i>
-								<input type="text" name="startDate" placeholder=" " required=""  autocomplete="off" id="datepickerS">
-								<i>結束日期</i>
-								<input type="text" name="endDate" placeholder=" " required=""  autocomplete="off" id="datepickerF">
-							</span>
-							<!---
-							<span>
-								<i>Subject</i>
-								<input type="text" name="Subject" placeholder=" " required="">
-							</span>-->
+							<div class="col-md-6">
+									<span>
+											<i>課程名稱</i>
+											<input type="text" name="className" placeholder=" " required=""  autocomplete="off">
+									</span>
+							</div>
+							<div class="col-md-6">
+								<span>
+									<i>開始日期</i>
+									<input type="text" name="startDate" placeholder=" " required=""  autocomplete="off" id="datepickerS">
+									<i>結束日期</i>
+									<input type="text" name="endDate" placeholder=" " required=""  autocomplete="off" id="datepickerF">
+								</span>
+							</div>
+								
+								<span>
+									<i>選擇教學方式</i>
+								</span>
+								<div class="clearfix"> </div>
 							
-							<span>
-								<i>課程敘述</i>
-								<textarea name="describe" placeholder=" " required=""  autocomplete="off"></textarea>
-							</span>
-							<span>
-								<i>課程圖片上傳</i>
-							</span>
-								<label class="btn btn-info">
-										<input id="upload_img" style="display:none;" type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"  name="picture" />
-										<i class="fa fa-photo"></i> 上傳圖片
-								</label>
-								<img id="preview_progressbarTW_img" src="#" / style="max-width: 250px; display:block; margin:auto;" >
-							 
 
-							<div class="clearfix"> </div>
+										<figure class="snip1321" ID="ChooseImage">
+											<input id="Step" type="radio" name="choose" value="Step">
+												<img src="images/step.jpg" alt="sq-sample26" name="choose" value="Step" >
+												<figcaption ID='hoverword'>
+													<h3>STEP</h3>
+													<p>分為圖片與文字，一步驟一步驟教學</p>
+												</figcaption>
+										</figure>
+							
 
-							<span>
-								<i>選擇教學方式</i>
-							</span>
-
-								<p>圖片+文字(Step + Picture) 與 影音+文字(Video + Word)</p>
-								<div class="cc-selector-2">
-									<input id="Step" type="radio" name="choose" value="Step" />
-										<label class="Template-cc Step" for="Step"> <img src="images/step.jpg"/></label>
-									<input id="Vid" type="radio" name="choose" value="Vid" />
-										<label class="Template-cc Vid"for="Vid"><img src="images/video.jpg"/></label>
 									
-								</div>
+								
+										<figure class="snip1321">
+											<input id="Vid" type="radio" name="choose" value="Vid">
+												<img src="images/video.jpg" alt="sq-sample28" name="choose" value="Vid">
+												<figcaption ID='hoverword'>
+													<h3>Vid  </h3>
+													<p>影片即教學，文字輔助影片介紹</p>
+												</figcaption>
+										</figure>
+								
+									
+										
+				
+										
+									
+								<div class="clearfix"> </div>
+								<!---
+								<span>
+									<i>Subject</i>
+									<input type="text" name="Subject" placeholder=" " required="">
+								</span>-->
+								
+								<span>
+									<i>課程敘述</i>
+									<textarea name="describe" placeholder=" " required=""  autocomplete="off"></textarea>
+								</span>
+								<span>
+									<i>課程圖片上傳</i>
+								</span>
+									<label class="btn btn-info">
+											<input id="upload_img" style="display:none;" type="file" onchange="readURL(this)" targetID="preview_progressbarTW_img" accept="image/gif, image/jpeg, image/png"  name="picture" />
+											<i class="fa fa-photo"></i> 上傳圖片
+									</label>
+									<img id="preview_progressbarTW_img" src="#" / style="max-width: 250px; display:block; margin:auto;" >
+								
 
-							<!--
-							<a href="/courseView"></a>
-								<div class="containerbutton">
-									<button id="buttonview">預覽</button>
+								<div class="clearfix"> </div>
+
+								
+
+								<!--
+								<a href="/courseView"></a>
+									<div class="containerbutton">
+										<button id="buttonview">預覽</button>
+									</div>
+								</a>-->
+								<div class="containerbuttonview">
+									<button type="submit" class="btn btn-default">建立</button>
 								</div>
-							</a>-->
-							 <div class="containerbuttonview">
-								<button type="submit" class="btn btn-default">建立</button>
-							 </div>
 							
 						</form>
 						
 					</div>
 					
-				</div> <!---
-				<div class="col-md-10 w3_agile_mail_right">
-					<div class="w3_agileits_mail_right_grid">
-						<h4 class="contactTitle2">課程預覽</h4>
-						<h5>敬請期待</h5>
-						
-					</div>
-					<!---
-					<div class="w3_agileits_mail_right_grid_main">
-						<div class="w3layouts_mail_grid_left">
-							<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-							</div>
-							<div class="w3layouts_mail_grid_left2">
-								<h3>Mail Us</h3>
-								<a href="mailto:info@example.com">info@example.com</a>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="w3layouts_mail_grid_left">
-							<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-								<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-							</div>
-							<div class="w3layouts_mail_grid_left2">
-								<h3>Address</h3>
-								<p>My Company 8907 Ukraine.</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="w3layouts_mail_grid_left">
-							<div class="w3layouts_mail_grid_left1 hvr-radial-out">
-								<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-							</div>
-							<div class="w3layouts_mail_grid_left2">
-								<h3>Phone</h3>
-								<p>+(0121) 121 121</p>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-					</div>
-					-->
+				
 					
 				</div>
 				<div class="clearfix"> </div>
-			</div>
+			
 		</div>
 	</div>
 	<div id="map"></div>
@@ -375,59 +368,60 @@ $(function() {
   -->
 <!-- footer -->
 <div class="footer">
-		<div class="container">
-			<div class="w3agile_footer_grids">
-				<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
-					<div class="agileits_w3layouts_footer_logo">
-						<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-					<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
-					</div>
+	<div class="container">
+		<div class="w3agile_footer_grids">
+			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
+				<div class="agileits_w3layouts_footer_logo">
+					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
+				<!-- <img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img> -->
+				<img src="images/logo.png" style="height:80%; width:80%; float:right;"></img>
 				</div>
-				<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">
-					<h3>聯絡資訊</h3>
-					<h4>連絡電話 <span>02-2598-6218</span></h4>
-					<p><h4>研究室地址</h4> <span style="color:#fff; font-size:15px;"> 臺北市中正區濟南路 121號,六藝樓四樓401教室</span></p>
-					<ul class="agileits_social_list">
-						<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-						<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-					</ul>
-				</div> <!--
-				<div class="col-md-2 agileinfo_footer_grid agileinfo_footer_grid1">
-					<h3>Navigation</h3>
-					<ul class="w3layouts_footer_nav">
-						<li><a href="/index"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Home</a></li>
-						<li><a href="/icons"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Web Icons</a></li>
-						<li><a href="/typography"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Typography</a></li>
-						<li><a href="/contact"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Contact Us</a></li>
-					</ul>
+			</div>
+			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">
+				<h3>聯絡資訊</h3>
+				<h4>連絡電話 <span>02-2598-6218</span></h4>
+				<p><h4>研究室地址</h4> <span style="color:#fff; font-size:15px;"> 臺北市中正區濟南路 121號,六藝樓四樓401教室</span></p>
+				<ul class="agileits_social_list">
+					<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+				</ul>
+			</div> <!--
+			<div class="col-md-2 agileinfo_footer_grid agileinfo_footer_grid1">
+				<h3>Navigation</h3>
+				<ul class="w3layouts_footer_nav">
+					<li><a href="/index"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Home</a></li>
+					<li><a href="/icons"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Web Icons</a></li>
+					<li><a href="/typography"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Typography</a></li>
+					<li><a href="/contact"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Contact Us</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 agileinfo_footer_grid">
+				<h3>Blog Posts</h3>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
 				</div>
-				<div class="col-md-3 agileinfo_footer_grid">
-					<h3>Blog Posts</h3>
-					<div class="agileinfo_footer_grid_left">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/6.jpg" alt=" " class="img-responsive" /></a>
-					</div>
-					<div class="agileinfo_footer_grid_left">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/2.jpg" alt=" " class="img-responsive" /></a>
-					</div>
-					<div class="agileinfo_footer_grid_left">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
-					</div>
-					<div class="agileinfo_footer_grid_left">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/3.jpg" alt=" " class="img-responsive" /></a>
-					</div>
-					<div class="clearfix"> </div>
-				</div>-->
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/2.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/5.jpg" alt=" " class="img-responsive" /></a>
+				</div>
+				<div class="agileinfo_footer_grid_left">
+					<a href="#" data-toggle="modal" data-target="#myModal"><img src="images/3.jpg" alt=" " class="img-responsive" /></a>
+				</div>
 				<div class="clearfix"> </div>
-			</div>
-		</div>
-		<div class="w3_agileits_footer_copy">
-			<div class="container">
-				<p>© 2017 Germinate. All rights reserved | Design by <a href="http://w3layouts.com">ntub107512 專題組.</a></p>
-			</div>
+			</div>-->
+			<div class="clearfix"> </div>
 		</div>
 	</div>
+	<div class="w3_agileits_footer_copy">
+		<div class="container">
+			<p>© 2017 Germinate. All rights reserved | Design by <a href="http://w3layouts.com">ntub107512 專題組.</a></p>
+		</div>
+	</div>
+</div>
 <!-- //footer -->
 
 <!-- 107512 menu -->
@@ -437,95 +431,95 @@ $(function() {
 <!-- 自己改的js -->
 <script src="js/107512/class/classbutton.js"></script>
 <!-- menu -->
-	<script>
-		$(function() {
+<script>
+	$(function() {
+		
+		initDropDowns($("div.shy-menu"));
+
+	});
+
+	function initDropDowns(allMenus) {
+
+		allMenus.children(".shy-menu-hamburger").on("click", function() {
 			
-			initDropDowns($("div.shy-menu"));
+			var thisTrigger = jQuery(this),
+				thisMenu = thisTrigger.parent(),
+				thisPanel = thisTrigger.next();
 
+			if (thisMenu.hasClass("is-open")) {
+
+				thisMenu.removeClass("is-open");
+
+			} else {			
+				
+				allMenus.removeClass("is-open");	
+				thisMenu.addClass("is-open");
+				thisPanel.on("click", function(e) {
+					e.stopPropagation();
+				});
+			}
+			
+			return false;
 		});
-
-		function initDropDowns(allMenus) {
-
-			allMenus.children(".shy-menu-hamburger").on("click", function() {
-				
-				var thisTrigger = jQuery(this),
-					thisMenu = thisTrigger.parent(),
-					thisPanel = thisTrigger.next();
-
-				if (thisMenu.hasClass("is-open")) {
-
-					thisMenu.removeClass("is-open");
-
-				} else {			
-					
-					allMenus.removeClass("is-open");	
-					thisMenu.addClass("is-open");
-					thisPanel.on("click", function(e) {
-						e.stopPropagation();
-					});
-				}
-				
-				return false;
-			});
-		}
-	</script>
+	}
+</script>
 <!-- //menu -->
 <!-- start-smoth-scrolling -->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
 <script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){		
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
+jQuery(document).ready(function($) {
+	$(".scroll").click(function(event){		
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 	});
+});
 </script>
 <!-- start-smoth-scrolling -->
 <!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
 <!-- here stars scrolling icon -->
-	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
-			});
-	</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/
+							
+		$().UItoTop({ easingType: 'easeOutQuart' });
+							
+		});
+</script>
 <!-- //here ends scrolling icon -->
 <script>
 
-	function readURL(input){
-	
-	  if(input.files && input.files[0]){
-	
-		var imageTagID = input.getAttribute("targetID");
-	
-		var reader = new FileReader();
-	
-		reader.onload = function (e) {
-	
-		   var img = document.getElementById(imageTagID);
-	
-		   img.setAttribute("src", e.target.result)
-	
-		}
-	
-		reader.readAsDataURL(input.files[0]);
-	
-	  }
-	
+function readURL(input){
+
+  if(input.files && input.files[0]){
+
+	var imageTagID = input.getAttribute("targetID");
+
+	var reader = new FileReader();
+
+	reader.onload = function (e) {
+
+	   var img = document.getElementById(imageTagID);
+
+	   img.setAttribute("src", e.target.result)
+
 	}
-	
+
+	reader.readAsDataURL(input.files[0]);
+
+  }
+
+}
+
 </script>
 </body>
 </html>

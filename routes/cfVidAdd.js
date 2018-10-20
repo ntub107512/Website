@@ -54,6 +54,8 @@ router.post('/', function(req, res){
     
     var classNo=req.query.classNo;
 
+    var date=req.param("date");
+
 	if (typeof req.file != 'undefined'){
         video=req.file.filename;   //取得上傳影片新名稱             
     }
@@ -62,18 +64,20 @@ router.post('/', function(req, res){
         word:word,
         video:video
     }
-    var newData2={
+   /* var newData2={
         describe:describe
-    }
+    }*/
     var newData3={
         title:title,
-        classNo:classNo
+        classNo:classNo,
+        date:date
     }
 
     var fileNoData
     var vidNoData
     var hwNoData
 
+   
     pool.query('INSERT INTO classfile SET ?', newData3, function(err, rows, fields) {
         if (err){
             res.render('addFail', {});   
@@ -89,20 +93,14 @@ router.post('/', function(req, res){
                         });		
                     res.render('addFail', {});      //新增失敗
                 }else{
-                    pool.query('INSERT INTO homework SET ?', newData2, function(err, rows, fields) {
-                        if (err){
-                            res.render('addFail', {});     //新增失敗
-                        }else{
+                   
                             pool.query('select * from classfile ORDER BY classFileNo DESC LIMIT 1', function(err, results) {
                                 fileNoData=results[0].classFileNo
                             });
                                 pool.query('select * from cfvid ORDER BY CFvidNo DESC LIMIT 1', function(err, results) {
                                     vidNoData=results[0].CFvidNo
-                                pool.query('select * from homework ORDER BY hwNo DESC LIMIT 1', function(err, results) {
-                                    hwNoData=results[0].hwNo                       
 
                                 pool.query('UPDATE cfvid SET classFileNo=? where CFvidNo=?', [fileNoData,vidNoData],function(err, rows, fields) {
-                                pool.query('UPDATE homework SET classFileNo=? where hwNo=?', [fileNoData,hwNoData],function(err, rows, fields) {
                                     console.log("---------------");
                                     console.log(fileNoData);
                                     console.log("---------------");
@@ -110,14 +108,14 @@ router.post('/', function(req, res){
                                     console.log("---------------");
                                     console.log(hwNoData);
                                     console.log("---------------");
-                                    res.render('vidAddSuccess', {memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,classNo:classNo});  //新增成功
+                                    res.render('vidAddSuccess', {memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,classNo:classNo,fileNoData:fileNoData});  //新增成功
+                                
                                 });
-                                });
-                                });
+                                
                                 });
                         }
-                    });
-                }
+                    
+                
             });
         }
     });

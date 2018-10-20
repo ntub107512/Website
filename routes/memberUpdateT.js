@@ -58,7 +58,6 @@ var memNo=req.session.memNo;
 var tmemName=req.param("tmemName");
 var memEmail=req.param("memEmail");
 var memPhone=req.param("memPhone");
-var memTitle=req.param("memTitle");
 var memMajor=req.param("memMajor");
 var memSchool=req.param("memSchool");
 var picture='';
@@ -68,7 +67,7 @@ if (typeof req.file != 'undefined'){
     picture=req.file.filename;   //取得上傳照片新名稱             
   
 // 將更改資料
-pool.query('UPDATE tmember SET tmemName=?, memEmail=?, memPhone=?, memTitle=?, memMajor=?, memSchool=?,picture=? where memNo=?', [tmemName, memEmail, memPhone, memTitle, memMajor, memSchool,picture, memNo], function(err, rows, fields) {
+pool.query('UPDATE tmember SET tmemName=?, memEmail=?, memPhone=?, memMajor=?, memSchool=?,picture=? where memNo=?', [tmemName, memEmail, memPhone, memMajor, memSchool,picture, memNo], function(err, rows, fields) {
   if (err){				
       //刪除先前已上傳的圖片
       picture='public/images/' + picture;
@@ -85,7 +84,7 @@ pool.query('UPDATE tmember SET tmemName=?, memEmail=?, memPhone=?, memTitle=?, m
   })
 }else{
   // 將更改資料
-  pool.query('UPDATE tmember SET tmemName=?, memEmail=?, memPhone=?, memTitle=?, memMajor=?, memSchool=? where memNo=?', [tmemName, memEmail, memPhone, memTitle, memMajor, memSchool, memNo], function(err, rows, fields) {
+  pool.query('UPDATE tmember SET tmemName=?, memEmail=?, memPhone=?,memMajor=?, memSchool=? where memNo=?', [tmemName, memEmail, memPhone, memMajor, memSchool, memNo], function(err, rows, fields) {
     if (err){			
       res.render('memUpdateFailT', {});     //導向更改失敗頁面
     }else{

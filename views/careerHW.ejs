@@ -8,6 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 <head>
 <title>植得｜會員</title>
+<link rel="Shortcut Icon" type="image/x-icon" href="images/logoHead.png" style="height:200%; width:200%;"/>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -50,31 +51,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 <body>
 
-<!-- bootstrap-pop-up -->
-	<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					Germinate
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-				</div>
-				<section>
-					<div class="modal-body">
-						<img src="images/4.jpg" alt=" " class="img-responsive" />
-						<p>Ut enim ad minima veniam, quis nostrum 
-							exercitationem ullam corporis suscipit laboriosam, 
-							nisi ut aliquid ex ea commodi consequatur? Quis autem 
-							vel eum iure reprehenderit qui in ea voluptate velit 
-							esse quam nihil molestiae consequatur, vel illum qui 
-							dolorem eum fugiat quo voluptas nulla pariatur.
-							<i>" Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
-								esse quam nihil molestiae consequatur.</i></p>
-					</div>
-				</section>
-			</div>
-		</div>
-	</div>
-<!-- //bootstrap-pop-up -->
 <!-- breadcrumbs -->
 	<div class="breadcrumbs">
 		<div class="container">
@@ -101,7 +77,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 					<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/<%= data[0].picture %>" alt="" style="height:500px; width:500px;"/></span>
+						<span class="logo"><img src="images/<%= classData[0].picture %>" alt="" style="height:500px; width:500px;"/></span>
 						<h1>[<%= tmemName %>]</h1>
 						<p>[<%= memTitle %>]<br />
 						[簡介]</p>
@@ -111,9 +87,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<nav id="nav" style="width:1500px;">
 							<ul>
 								<li><a href="/memberT" >個人資料</a></li>
-								<li><a href="/careerCourseT" >已發起課程</a></li>
-								<li><a href="#second" class="active">待批改作業</a></li>
-								<li><a href="/careerHWcorrect">已批改作業</a></li>
+								<li><a href="#second" class="active" >已發起課程</a></li>
 								<li><a href="/careerDiaryT">我的日記</a></li>
 								<li><img src="images/college-sign.png" style="width:80px; height:80px; float:right;"></li>
 							</ul>
@@ -125,7 +99,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<!-- Second Section -->
 								<section id="second" class="main special">
 									<header class="major">
-										<h2 style="font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;">待批改作業</h2>
+										<h2 style="font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;">已發起課程</h2>
 										<!--<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
 										posuere. Nulla massa urna, fermentum eget quam aliquet.</p>-->
 									</header>
@@ -134,30 +108,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<li class="style1" style="width:550px;">
 											
 											<!--<span class="icon fa-code-fork"></span>-->
-											<h1 style="color:#fff; text-align:left; font-weight:100px;">藍染一定要是藍色的嗎？</h1>
-											<strong style="border: #fff solid 2px; width:50%; margin-left:25%; border-radius:25px; padding:5px;">第一堂：什麼是藍染? </strong> 
-											<div class="bar-chart primary" style="border-radius: 10px;" data-total="2" animated>
-											<a href="/courseView" style="text-decoration:none;">	
-			    							<span class="bar-chart--inner" ID="chartfix" style="width:60%"> <%=checkNoRate %>%</span> 
-											<p style="float:right; margin-bottom:0; font-size:25px;">尚未批改份數：<%= checkNoCount %>份</p>
-											</a>
-										<% for(var i=0; i<data.length; i++) {%>
-											<div class="notCorrectHW" style="width:80%; float:center; margin-left:10%;">
-													<p style="margin:0px; padding-top:20px; font-size:30px; text-align:left; padding-bottom:0px;">Q：<%= data[i].describe %> <br/> A： </p>
+												<h1 style="color:#fff; text-align:left; font-weight:100px;"></h1>
+													<strong style="border: #fff solid 2px; width:50%; margin-left:25%; border-radius:25px; padding:5px;"> 所有課程 </strong>
+													
+										
+												<% for(var i=0; i<classData.length; i++) {%> 
+												<div class="notCorrectHW" style="width:80%; float:center; margin-left:10%;">
+														<div class="sMemberHw" style="padding-bottom:25px; ">
+															<div class="sMemberHW_item" style="padding:80px; background:#fff; border-radius: 25px; margin-top:80px; height:400px;">
+																<span class="image" style="float:left;"><img src="images/activityImages/<%= classData[i].classPicture %>" alt=""  style="height:300px; width:300px; position:relative; margin-top:-45px; margin-right:20px; margin-left:-30px;"/></span> <!-- 課程封面 --> 
+																
+																<p style="color:black; font-size:30px;max-width: 501px; float:left; margin-top:-25px; padding-left:50px; background:#1ECD97; border-radius: 25px; margin-left:50px; padding-left:15px; padding-right:15px; color:#fff; position:relative; text-align:center;"><%= classData[i].className %></p> <!-- 課程標題  -->
+																
+																<p style="color:#1ECD97; font-size:30px; float:left; margin-top:-20px; padding-left:50px;   margin-left:50px; padding-left:15px; padding-right:15px; position:relative; text-align:center;">參與課程人數:<%= smemTotalCnt %>人 </p> <!-- 參與課程人數  -->
+																
+															</div>
 
-													<div class="sMemberHw" style="padding-bottom:25px;">
-														<div class="sMemberHW_item" style="padding:80px; background:#fff; border-radius: 25px; margin-top:80px;">
-															<span class="image" style="float:left;"><img src="images/<%= data[i].spicture %>" alt=""  style="height:100px; width:100px; border-radius: 50px; position:relative; margin-top:-45px; margin-right:20px; margin-left:-30px;"/></span>
-															<p style="color:black; font-size:30px; float:left; margin-top:-20px;"><%= data[i].memName %></p>
-															<p style="color:black; font-size:23px; float:left; margin-top:-25px; padding-left:50px; background:#1ECD97; border-radius: 25px; margin-left:50px; padding-left:15px; padding-right:15px; color:#fff; width:450px; position:relative; text-align:left;"><%= data[i].word %></p>
+															<!-- courseViewT button 檢視課堂按鈕 start -->
+															<a href="/courseViewT?className=<%= classData[i].className %>" style="text-decoration:none;">
+																<button id="buttonlogout" href="/courseViewT" style="font-size:15px; color:#1ECD97; float:right; width:25px; height:45px; margin-top:-100px; margin-right:50px; letter-spacing:5px; position:relative; background:#fff;">檢視課堂</button>
+															</a>
+															<!-- courseViewT button 檢視課堂按鈕 end -->
+
+															<!-- HW button 檢視作業按鈕 start -->
+															<a href="/careerHwCourse?classNo=<%= classData[i].classNo %>">
+																<button id="buttonlogout" href="/careerHwCourse" style="font-size:15px; color:#1ECD97; float:right; width:25px; height:45px; margin-top:-100px; margin-right:225px; letter-spacing:5px; position:relative; background:#fff;">檢視作業</button>
+															</a>
+															<!-- HW button 檢視作業 按鈕 end -->
+															<p style="color:black; font-size:15px; float:left; margin-top:-45px; padding-left:50px; background:#1ECD57; margin-left:50px; padding-left:15px; padding-right:15px; color:#fff; position:relative; text-align:center;"><%= myDateFormat(classData[i].startDate) %></p>
 														</div>
-														<!-- feedback button 評分按鈕 start -->
-														<a href="/careerHWscore?hwAnsNo=<%= data[i].hwAnsNo %>">
-															<button id="buttonlogout" href="/careerHWscore" style="font-size:15px; color:#1ECD97; float:right; width:25px; height:45px; margin-top:-180px; margin-right:-60px; letter-spacing:5px; position:relative; background:#fff;">評分</button>
-														</a>
-														<!-- feedback button 評分按鈕 end -->	
 													</div>
-										<% } %>
+												<% } %>										
 										</li>
 									</ul>
 								</section>
@@ -170,7 +151,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
 				<div class="agileits_w3layouts_footer_logo">
 					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-				<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
+					<img src="images/logo.png" style="height:80%; width:80%; float:right;"></img>
+				<!-- <img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img> -->
 				</div>
 			</div>
 			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">

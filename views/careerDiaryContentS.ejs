@@ -8,6 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 <head>
 <title>植得 | 我的日記內容</title>
+<link rel="Shortcut Icon" type="image/x-icon" href="images/logoHead.png" style="height:200%; width:200%;"/>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -95,9 +96,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- Header -->
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/<%= data[0].spicture %>" alt="" style="width:500px; height:500px;"/></span>
-						<h1>[<%= data[0].smemName %>]</h1>
-						<p>[<%= memTitle %>]<br />
-						[簡介]</p>
+						<h1><%= data[0].smemName %></h1>
+						<p><%= memTitle %><br /></p>
       				</header>
 	
 					<!-- Nav -->
@@ -122,20 +122,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<% for(var i=0; i<data.length; i++) {%>
 										<div class="container-fluid">
 										
-											<div class="row">
+											<div class="row" style="margin-right: -20%;">
 												<div class="col-md-12 d1">
 													<div class="row Content">
 														<div class="col-md-6 img"> 
 															<!-- edit button 編輯按鈕 start -->
 															<div class="containerbutton">
-																<a href="/careerDiaryContentEditS?diaNo=<%= data[i].diaNo %>" id="editbutton" style="width:45px; margin-top:-10px; text-decoration:none;">
+																<a href="/careerDiaryContentEditS?pageNo=<%= data[i].pageNo %>" id="editbutton" style="width:45px; margin-top:-10px; text-decoration:none;">
 																	<button id="buttonview" style="margin-top:-950px; margin-right:-280%; height:50px; width:10px; margin-top:0px;">
 																		<img src="images/editicongreen.png" onmouseout="this.src='images/editicongreen.png';" style="width:30px; height:30px;"></img>
 																	</button>
 																</a>	
 															</div>
 															<!-- edit button 編輯按鈕 end -->
-															<img class="diaryCon" src="images/<%= data[i].diaPic %>" alt="植得" />
+															<img class="diaryCon" src="images/<%= data[i].conPic %>" alt="植得" />
 														</div>
 														<div class="col-md-6 content" style="height:10%; position:relative; margin-top: 100px;">
 															<p>日期：<%=  myDateFormat(data[i].diaDate) %></p>
@@ -162,7 +162,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									    -->
 										
 										<div class="containerbuttonview" style="margin-left:40%; margin-right:50%; ">
-											<a href="/careerDiaryContentCreateS" style="text-decoration:none; border-style: none;">
+											<a href="/careerDiaryContentCreateS?diaNo=<%= data[0].diaNo %>" style="text-decoration:none; border-style: none;">
 												<button id="buttonlogout" style="font-size:15px; color:#1ECD97;  margin-left:10%;float:left; margin-top: -5%;font-family: 'Arbutus Slab', serif, 'Noto Sans TC', sans-serif;">新增日記</button>
 											</a>
 											<a href="/careerDiaryS" style="text-decoration:none; border-style: none;">
@@ -223,7 +223,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
 				<div class="agileits_w3layouts_footer_logo">
 					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-				<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
+				<!-- <img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img> -->
+				<img src="images/logo.png" style="height:80%; width:80%; float:right;"></img>
 				</div>
 			</div>
 			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">

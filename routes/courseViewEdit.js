@@ -57,24 +57,34 @@ router.get('/', function(req, res, next) {
     }
   //------------------------------------------
     var classNo=req.query.classNo;
-
-    pool.query('select count(*) as cnt from classfile',  function(err, results) {
-        if (err)throw err;
-
-        var totalLine=results[0].cnt;
-        var totalPage=Math.ceil(totalLine/linePerPage);
-
-        pool.query('select a.*,b.* From class a,classfile b where a.classNo=? and b.classNo=? limit ?, ?',[classNo,classNo,(pageNo-1)*linePerPage, linePerPage], function(err, results) {
-            if (err) {
-                res.render('addFail', {});
-            }else{
-
-              console.log(results.length);
-                var recordNo=(pageNo-1)*linePerPage+1;
-                res.render('courseViewEdit', {data:results, pageNo:pageNo, totalLine:totalLine, totalPage:totalPage, startPage:startPage, linePerPage:linePerPage, navSegments:navSegments,memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,classNo:classNo});   
-            }
-        }); 
-    }); 
+    var memNo=req.session.memNo;
+    var member;
+    pool.query('select * from class where classNo=?', [classNo], function(err, results) {
+        member=results[0].memNo;
+    if(member==memNo){
+        pool.query('select count(*) as cnt from classfile',  function(err, results) {
+            if (err)throw err;
+    
+            var totalLine=results[0].cnt;
+            var totalPage=Math.ceil(totalLine/linePerPage);
+    
+            pool.query('select a.*,b.* From class a,classfile b where a.classNo=? and b.classNo=? limit ?, ?',[classNo,classNo,(pageNo-1)*linePerPage, linePerPage], function(err, results) {
+                if (err) {
+                    res.render('addFail', {});
+                }else{
+    
+                  console.log(results.length);
+                    var recordNo=(pageNo-1)*linePerPage+1;
+                    res.render('courseViewEdit', {data:results, pageNo:pageNo, totalLine:totalLine, totalPage:totalPage, startPage:startPage, linePerPage:linePerPage, navSegments:navSegments,memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,classNo:classNo});   
+                }
+            }); 
+        });
+    }else{
+        //以下為編輯別的開課人會顯示的錯誤畫面
+        res.render('index', {memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture});
+    }
+   
+});  
 });
 
 module.exports = router;                     

@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>植得 | 作業評分</title>
-
+<link rel="Shortcut Icon" type="image/x-icon" href="images/logoHead.png" style="height:200%; width:200%;"/>
 <meta name="description" content="Source code generated using layoutit.com">
 <meta name="author" content="LayoutIt!">
 
@@ -37,6 +37,8 @@
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
 <link href="css/107512/font.css" rel="stylesheet">
+
+
 
 <!-- button -->
 <link href="css/107512/class/classbutton.css" rel="stylesheet" type="text/css" media="all" />
@@ -129,21 +131,32 @@
 					
 
 					<div class="sMemberHW_item" style="padding:80px; background:#fff; border-radius: 25px; margin-top:80px;">
-						<span class="image" style="float:left;"><img src="images/12.jpg" alt=""  style="height:100px; width:100px; border-radius: 50px; position:relative; margin-top:-45px; margin-right:20px; margin-left:-30px;"/></span>
-						<p style="color:black; font-size:30px; float:left; margin-top:-20px;">王曉明</p>
-						<p style="color:black; font-size:23px; float:left; margin-top:-25px; padding-left:50px; background:#1ECD97; border-radius: 25px; margin-left:50px; padding-left:15px; padding-right:15px; color:#fff; width:450px; position:relative; text-align:left;">藍染的顏色從植物裡面來~</p>
+						<span class="image" style="float:left;"><img src="images/<%= data[0].spicture %>" alt=""  style="height:100px; width:100px; border-radius: 50px; position:relative; margin-top:-45px; margin-right:20px; margin-left:-30px;"/></span>
+						<p style="color:black; font-size:30px; float:left; margin-top:-20px;"><%= data[0].smemName %></p>
+						<p style="color:black; font-size:23px; float:left; margin-top:-25px; padding-left:50px; background:#1ECD97; border-radius: 25px; margin-left:50px; padding-left:15px; padding-right:15px; color:#fff; width:450px; position:relative; text-align:left;"><%= data[0].word %></p>
 							
 					</div>
 
+
+					<label for="textarea" style="font-size:25px; padding-top:25px;">評分</label><br>
+					<p style="padding-top:50px;">
+						<%= data[0].result %>
+					</p>
+
 					<label for="textarea" style="font-size:25px; padding-top:25px;">評語</label><br>
 					<p style="padding-top:50px;">
-						jiji jeij ijwei wj eij
+						<%= data[0].feedback %>
 					</p>
+
+					
+
+					
 					<!-- 
 					<a href="/memberT"><button id="buttonview" style="font-size:20px; float:right; width:150px; margin-top:10px;">我的會員</button></a>
 					<a href="/index"><button id="buttonview" style="font-size:20px; float:right; width:150px; margin-right:10px; margin-top:10px;">回首頁</button></a>
 					<a href="/logout"><button id="buttonview" style="font-size:20px; float:right; width:150px; margin-right:10px; margin-top:10px;">登出</button></a>
 					-->
+					<!-- 
 					<label for="textarea" style="font-size:25px; padding-top:25px; padding-bottom:0px;">評分</label><br>
 					<p class="starWrapper" onmouseover="rate(this,event)" style="width: 100%; height: 100%; "> 
 							<img src="http://www.jb51.net/upload/20080508122008586.gif" title="很爛" />
@@ -152,11 +165,8 @@
 							<img src="http://www.jb51.net/upload/20080508122008586.gif" title="較好" />
 							<img src="http://www.jb51.net/upload/20080508122008586.gif" title="很好" /> 
 					</p>
-
-					
-
-
-					<a href="/careerHWcorrect"><button id="buttonview" style="font-size:20px; float:right; width:150px; margin-top:-500px; position: relative;">確認</button></a>
+					-->
+					<a href="/careerHwCourseHw?classFileNo=<%= classFileNo %>&classNo[classNum]=<%= classNo %>&hwNo[hwNum]=<%= hwNo %>&hwAnsNo[hwAnsNum]=<%= hwAnsNo %>"><button id="buttonview" style="font-size:20px; float:right; width:150px; margin-top:-500px; position: relative;">確認</button></a>
 					
 				</div>
             </div>
@@ -176,7 +186,8 @@
 				<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
 					<div class="agileits_w3layouts_footer_logo">
 						<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-					<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
+					<!-- <img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img> -->
+					<img src="images/logo.png" style="height:80%; width:80%; float:right;"></img>
 					</div>
 				</div>
 				<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">
@@ -195,6 +206,10 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/scripts.js"></script>   
+
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+   <script  src="js/107512/class/styleForBar.js"></script>
+
 	
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
 	<script type="text/javascript">
