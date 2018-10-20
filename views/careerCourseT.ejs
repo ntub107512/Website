@@ -8,6 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 <head>
 <title>植得｜會員</title>
+<link rel="Shortcut Icon" type="image/x-icon" href="images/logoHead.png" style="height:200%; width:200%;"/>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -181,10 +182,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<ul class="statistics">
 											
 											<li class="style1" style="width:550px;">
-												<a href="/courseView?classNo=<%= data[i].classNo %>" style="text-decoration:none;">
+												<a href="/courseViewT?className=<%= data[i].className %>" style="text-decoration:none;">
 												<!--<span class="icon fa-code-fork"></span>-->
 												<h1 style="color:#fff;"><%= data[i].className %></h1> 
-												<p style="font-size:27px;"> 課程敘述:對於無患子的手工肥皂製作，希望小朋友對於植物有極大的興趣 </p>
+												<p style="font-size:27px;"> <%= data[i].describes %> </p>
 												<strong style="float:left; font-size:10px; margin-bottom:0px; font-size:15px;"><%= myDateFormat(data[i].startDate) %>~ <%= myDateFormat(data[i].endDate) %></strong> 
 												<p style="float:right; margin-bottom:0; font-size:25px;">參與人數：15人</p>
 												</a>
@@ -385,7 +386,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
 				<div class="agileits_w3layouts_footer_logo">
 					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-				<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
+				<!-- <img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>-->
+				<img src="images/logo.png" style="height:80%; width:80%; float:right;"></img>
+
 				</div>
 			</div>
 			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">

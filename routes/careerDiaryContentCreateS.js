@@ -18,7 +18,7 @@ var pool = require('./lib/db.js');
 router.get('/', function(req, res, next) {
   var diaryTagData;
   var memNo=req.session.memNo;
-
+  var diaNo=req.query.diaNo;
   //------------------	
 // 先取出日記tag資料
 //------------------
@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
       }
       pool.query('select * from smember where memNo=?', [memNo], function(err, results) {
     
-          res.render('careerDiaryContentCreateS', {diaryTagData:diaryTagData,memNo:req.session.memNo,smemName:req.session.smemName,memTitle:req.session.memTitle,data:results});
+          res.render('careerDiaryContentCreateS', {diaryTagData:diaryTagData,memNo:req.session.memNo,memName:req.session.memName,memTitle:req.session.memTitle,data:results,diaNo:diaNo});
      }); 
     });
   });

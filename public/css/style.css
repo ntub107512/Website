@@ -607,13 +607,15 @@ button.close {
 }
 .agileinfo_grid {
 	position: relative;
-    text-align: center;
+	text-align: center;
+	height:100%;
 }
 
 /* Common style */
 .agileinfo_grid figure {
 	position: relative;
 	overflow: hidden;
+	
 }
 
 .agileinfo_grid figure img {
@@ -666,6 +668,7 @@ figure.agileits_effect_moses img {
 	opacity: 0.85;
 	-webkit-transition: opacity 0.35s;
 	transition: opacity 0.35s;
+	height:595px;
 }
 
 figure.agileits_effect_moses h4,

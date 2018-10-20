@@ -23,12 +23,19 @@ var courseViewT = require('./routes/courseViewT');
 var courseViewEdit = require('./routes/courseViewEdit');
 var courseCreate = require('./routes/courseCreate');
 var classVidView = require('./routes/classVidView');
-var classVidEdit = require('./routes/classVidEdit');
+var classEdit = require('./routes/classEdit');
 var classVidCreate = require('./routes/classVidCreate');
 var icons = require('./routes/icons');
 var typography = require('./routes/typography');
 var classStepView = require('./routes/classStepView');
 var classStepCreate = require('./routes/classStepCreate');
+var classStepCreate1 = require('./routes/classStepCreate1')
+var classStepCreate2 = require('./routes/classStepCreate2')
+var classStepCreate3 = require('./routes/classStepCreate3')
+var classStepCreate4 = require('./routes/classStepCreate4')
+var StepAddSuccess = require('./routes/StepAddSuccess')
+var HomeWorkResponseSuccess = require('./routes/HomeWorkResponseSuccess')
+
 var classStepEdit = require('./routes/classStepEdit');
 var login = require('./routes/login');
 var memberT = require('./routes/memberT');
@@ -48,6 +55,7 @@ var careerDiaryContentCreateT = require('./routes/careerDiaryContentCreateT');
 var careerDiaryContentEditT = require('./routes/careerDiaryContentEditT');
 
 var careerDiaryBookT = require('./routes/careerDiaryBookT');
+var careerDiaryBookS = require('./routes/careerDiaryBookS');
 var careerDiaryBookCreateT = require('./routes/careerDiaryBookCreateT');
 
 var careerDiaryS = require('./routes/careerDiaryS');
@@ -87,6 +95,9 @@ var careerDiary = require('./routes/careerDiary');
 
 //var score= require('./routes/score');
 var careerHWscore= require('./routes/careerHWscore');
+var careerHwCourseHw= require('./routes/careerHwCourseHw');
+var careerHwCourse= require('./routes/careerHwCourse');
+
 var careerHWcorrectDetail= require('./routes/careerHWcorrectDetail');
 
 var courseLock= require('./routes/courseLock');
@@ -102,6 +113,23 @@ var classUpdate = require('./routes/classUpdate');
 var classVidViewT = require('./routes/classVidViewT');
 
 var vidHW = require('./routes/vidHW');
+var Tscore = require('./routes/Tscore');
+
+var diaryBookAdd = require('./routes/diaryBookAdd');
+var cfStepAdd1= require('./routes/cfStepAdd1');
+var cfStepAdd2= require('./routes/cfStepAdd2');
+var stepHWAdd= require('./routes/stepHWAdd');
+var cfStepAdd3= require('./routes/cfStepAdd3');
+var cfStepAdd4= require('./routes/cfStepAdd4');
+
+var vidHWAdd= require('./routes/vidHWAdd');
+var cfVidUpdate= require('./routes/cfVidUpdate');
+var stepHW = require('./routes/stepHW');
+
+var careerHwS= require('./routes/careerHwS');
+var careerHwCourseS= require('./routes/careerHwCourseS');
+var careerHWcorrectDetailS= require('./routes/careerHWcorrectDetailS');
+var cfstepUpdate = require('./routes/cfstepUpdate')
 //-------------------------------------------------------
 
 
@@ -152,12 +180,21 @@ app.use('/courseViewT', courseViewT);
 app.use('/courseViewEdit', courseViewEdit);
 app.use('/courseCreate', courseCreate);
 app.use('/classVidView', classVidView);
-app.use('/classVidEdit', classVidEdit);
+app.use('/classEdit', classEdit);
 app.use('/classVidCreate', classVidCreate);
 app.use('/icons', icons);
 app.use('/typography', typography);
 app.use('/classStepView', classStepView);
 app.use('/classStepCreate', classStepCreate);
+app.use('/classStepCreate1', classStepCreate1);
+app.use('/classStepCreate2', classStepCreate2);
+app.use('/classStepCreate3', classStepCreate3);
+app.use('/classStepCreate4', classStepCreate4);
+app.use('/StepAddSuccess', StepAddSuccess);
+app.use('/HomeWorkResponseSuccess', HomeWorkResponseSuccess);
+
+
+
 app.use('/classStepEdit', classStepEdit);
 app.use('/login', login);
 app.use('/memberT', memberT);
@@ -177,6 +214,7 @@ app.use('/careerDiaryContentCreateT', careerDiaryContentCreateT);
 app.use('/careerDiaryContentEditT', careerDiaryContentEditT);
 
 app.use('/careerDiaryBookT', careerDiaryBookT);
+app.use('/careerDiaryBookS', careerDiaryBookS);
 app.use('/careerDiaryBookCreateT', careerDiaryBookCreateT);
 
 app.use('/careerDiaryS', careerDiaryS);
@@ -217,6 +255,10 @@ app.use('/careerDiary', careerDiary);
 
 //app.use('/score',score);
 app.use('/careerHWscore',careerHWscore);
+app.use('/careerHwCourseHw',careerHwCourseHw);
+app.use('/careerHwCourse',careerHwCourse);
+
+
 app.use('/careerHWcorrectDetail',careerHWcorrectDetail);
 
 app.use('/courseLock',courseLock);
@@ -229,6 +271,23 @@ app.use('/classUpdate',classUpdate);
 app.use('/classVidViewT', classVidViewT);
 
 app.use('/vidHW', vidHW);
+app.use('/Tscore', Tscore);
+
+app.use('/diaryBookAdd',diaryBookAdd);
+app.use('/cfStepAdd1',cfStepAdd1);
+app.use('/cfStepAdd2',cfStepAdd2);
+app.use('/stepHWAdd',stepHWAdd);
+app.use('/cfStepAdd3',cfStepAdd3);
+app.use('/cfStepAdd4',cfStepAdd4);
+
+app.use('/vidHWAdd',vidHWAdd);
+app.use('/cfVidUpdate',cfVidUpdate);
+app.use('/stepHW',stepHW);
+
+app.use('/careerHwS',careerHwS);
+app.use('/careerHwCourseS',careerHwCourseS);
+app.use('/careerHWcorrectDetailS',careerHWcorrectDetailS);
+app.use('/cfstepUpdate',cfstepUpdate);
 //-------------------------------------------------------
 
 

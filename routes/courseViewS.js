@@ -64,7 +64,13 @@ router.get('/', function(req, res, next) {
 
   var memNo=req.session.memNo;
   var classNo=req.query.classNo;
+  var chooseData; 
 
+  pool.query('select * from class where classNo=?', [classNo], function(err, results) {
+    chooseData=results[0].choose
+    console.log(chooseData)
+    
+if(chooseData=="Vid"){
   pool.query('select count(*) as cnt from classfile',  function(err, results) {
     if (err)throw err;
 
@@ -74,7 +80,7 @@ router.get('/', function(req, res, next) {
     console.log(totalLine);
     console.log("------------------------------------");
     console.log(classNo);
-    pool.query('select a.*,b.* from classfile a,class b where a.classNo=? AND b.classNo=? limit ?, ?',[classNo,classNo,(pageNo-1)*linePerPage, linePerPage], function(err, results) {
+    pool.query('select a.*,b.*,c.* from classfile a,class b,cfvid c where a.classNo=? AND b.classNo=? and c.classFileNo=a.classFileNo limit ?, ?',[classNo,classNo,(pageNo-1)*linePerPage, linePerPage], function(err, results) {
         if (err) {
             res.render('addFail', {});
         }else{
@@ -84,8 +90,30 @@ router.get('/', function(req, res, next) {
             res.render('courseViewS', {data:results, pageNo:pageNo, totalLine:totalLine, totalPage:totalPage, startPage:startPage, linePerPage:linePerPage, navSegments:navSegments,memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,classNo:classNo});   
         }
     }); 
-}); 
-   
+    }); 
+}else if(chooseData=="Step"){
+    pool.query('select count(*) as cnt from classfile',  function(err, results) {
+        if (err)throw err;
+    
+        var totalLine=results[0].cnt;
+        var totalPage=Math.ceil(totalLine/linePerPage);
+        console.log("------------------------------------");
+        console.log(totalLine);
+        console.log("------------------------------------");
+        console.log(classNo);
+        pool.query('select a.*,b.* from classfile a,class b where a.classNo=? AND b.classNo=? limit ?, ?',[classNo,classNo,(pageNo-1)*linePerPage, linePerPage], function(err, results) {
+            if (err) {
+                res.render('addFail', {});
+            }else{
+             
+              console.log(results.length);
+                var recordNo=(pageNo-1)*linePerPage+1;
+                res.render('courseViewStepS', {data:results, pageNo:pageNo, totalLine:totalLine, totalPage:totalPage, startPage:startPage, linePerPage:linePerPage, navSegments:navSegments,memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,classNo:classNo});   
+            }
+        }); 
+        }); 
+}
+  });
 });
 
 module.exports = router;

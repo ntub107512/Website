@@ -8,6 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 <head>
 <title>植得 | 我的日記</title>
+<link rel="Shortcut Icon" type="image/x-icon" href="images/logoHead.png" style="height:200%; width:200%;"/>
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -59,31 +60,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 <body>
 
-<!-- bootstrap-pop-up -->
-	<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					Germinate
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
-				</div>
-				<section>
-					<div class="modal-body">
-						<img src="images/4.jpg" alt=" " class="img-responsive" />
-						<p>Ut enim ad minima veniam, quis nostrum 
-							exercitationem ullam corporis suscipit laboriosam, 
-							nisi ut aliquid ex ea commodi consequatur? Quis autem 
-							vel eum iure reprehenderit qui in ea voluptate velit 
-							esse quam nihil molestiae consequatur, vel illum qui 
-							dolorem eum fugiat quo voluptas nulla pariatur.
-							<i>" Quis autem vel eum iure reprehenderit qui in ea voluptate velit 
-								esse quam nihil molestiae consequatur.</i></p>
-					</div>
-				</section>
-			</div>
-		</div>
-	</div>
-<!-- //bootstrap-pop-up -->
 <!-- breadcrumbs -->
 <div class="breadcrumbs">
 	<div class="container">
@@ -109,19 +85,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 					<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/<%= data[0].picture %>" alt="" /></span>
-						<h1>[<%= data[0].tmemName %>]</h1>
-						<p>[<%= memTitle %>]<br />
-						[簡介]</p>
+						<span class="logo"><img src="images/<%= data[0].picture %>" alt="" style="height:500px; width:500px;" /></span>
+						<h1><%= data[0].tmemName %></h1>
+						<p><%= memTitle %><br /></p>
       				</header>
 	
 					<!-- Nav -->
 						<nav id="nav" style="width:1500px;">
 							<ul>
 								<li><a href="/memberT">個人資料</a></li>
-								<li><a href="/careerCourseT">已發起課程</a></li>
-								<li><a href="/careerHW">待批改作業</a></li>
-								<li><a href="/careerHWcorrect">已批改作業</a></li>
+								<li><a href="/careerHW">已發起課程</a></li>
 								<li><a href="#intro" class="active">我的日記</a></li>
 								<li><img src="images/college-sign.png" style="width:80px; height:80px; float:right;"></li>
 							</ul>
@@ -132,7 +105,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<!-- Get Started --> 	
 								<section id="intro" class="main special">
 									<header class="major">
-										<h2>我的日記 My Diary</h2>
+										<h2>觀察 ‧ 日記</h2>
 									</header>
 									<div class="container ">
 											<div class="main-content">
@@ -142,37 +115,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													<form action="#">
 														<ul>
 														<div class="container-diary">
-															<div class="gallery">
-																<a href="/careerDiaryContentT?tagNo=3">
+														<% for(var i=0; i<data.length; i++) {%>
+																<div class="gallery">
+																		<a href="/careerDiaryContentT?diaNo=<%= data[i].diaNo %>&tagNo[tagNum]=<%= tagNo %>" >
+																			<div class="gallery-item">
+																				<img class="gallery-image" src="images/<%= data[i].diaPic %>" alt="Planting Sunflower">
+																				<figcaption class="img-title">
+																					<h5><span class="tag">#</span><%= data[i].title %></h5>
+																				<!--	<p>共 15 篇</p> -->
+																				</figcaption>
+																			</div>
+																		</a>
+														<% } %>	
+														<!--	
+																<a href="/careerDiaryContentT?tagNo[tagNum]=4">
 																	<div class="gallery-item">
-																		<img class="gallery-image" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
-																		<figcaption class="img-title">
-																			<h5><span class="tag">#</span>花</h5>
-																		<!--	<p>共 15 篇</p> -->
-																		</figcaption>
-																	</div>
-																</a>
-																
-																<a href="/careerDiaryContentT?tagNo=4">
-																	<div class="gallery-item">
-																		<img class="gallery-image" src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
+																		<img class="gallery-image" src="https://images.unsplash.com/photo-1495192432427-e9010da2fbc7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4a760112bc72e72c43a78c855ec04732&auto=format&fit=crop&w=1050&q=80" alt="grass">
 																		<figcaption class="img-title">
 																			<h5><span class="tag">#</span>草</h5>
-																		<!--	<p>共 15 篇</p> -->
+																			<p>共 15 篇</p> 
 																		</figcaption>
 																	</div>
 																</a>
 																
-																<a href="/careerDiaryContentT?tagNo=5">
+																<a href="/careerDiaryContentT?tagNo[tagNum]=5">
 																	<div class="gallery-item">
-																		<img class="gallery-image" src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=500&h=500&fit=crop" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
+																		<img class="gallery-image" src="https://images.unsplash.com/photo-1444492696363-332accfd40c0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=86f873be724b2c87fd5d626febab92c9&auto=format&fit=crop&w=675&q=80" alt="tree">
 																		<figcaption class="img-title">
 																			<h5><span class="tag">#</span>樹</h5>
-																		<!--	<p>共 15 篇</p> -->
+																		<!--	<p>共 15 篇</p> 
 																		</figcaption>
 																	</div>
 																</a>
-														
+														-->
 															</div>
 														
 														</div>
@@ -185,11 +160,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										</div>
 										<!-- / container -->	
 								
-									<footer class="major">
-										<ul class="actions">
-											<li><a href="/careerDiaryT" class="button">回到日記總覽</a></li>
-										</ul>
-									</footer>
+									
+										<div class="containerbuttonview" style="margin-left:52%; margin-right:50%; ">
+											<a href="/careerDiaryBookCreateT"><button id="buttonCreate" >新增日記小書</button></a>
+										</div>
+									
 								
 								</section>
 	
@@ -272,7 +247,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-3 agileinfo_footer_grid" style="margin-left:200px;">
 				<div class="agileits_w3layouts_footer_logo">
 					<!--<h1><a href="/index"><span>植</span>得<i></i></a></h1>-->
-				<img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img>
+					<img src="images/logo.png" style="height:80%; width:80%; float:right;"></img>
+				<!-- <img src="images/logo.png" style="height:50%; width:50%; background:#a1d034; border-radius: 15px;"></img> -->
 				</div>
 			</div>
 			<div class="col-md-4 agileinfo_footer_grid" style="margin-left:80px;">

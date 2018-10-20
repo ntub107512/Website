@@ -21,7 +21,7 @@ router.get('/', function(req, res, next) {
     return;
 }
 //------------------------------------------
-  var diaNo=req.query.diaNo;
+  var pageNo=req.query.pageNo;
   var memNo=req.session.memNo;
 
   var diaryTagData;
@@ -35,10 +35,9 @@ router.get('/', function(req, res, next) {
         diaryTagData=[];
       }else{
         diaryTagData=results;
-        pool.query('select a.*,b.* from diary a,smember b  where a.diaNo=? and b.memNo=?', [diaNo,memNo], function(err, results) {
-          pool.query('select * from smember where memNo=?', [memNo], function(err, results) {
-            res.render('careerDiaryContentEditS', {memNo:req.session.memNo, memTitle:req.session.memTitle,data:results,diaryTagData:diaryTagData,diaNo:diaNo,data:results});
-          });
+        pool.query('select a.*,b.* from diacontent a,smember b  where a.pageNo=? and b.memNo=?', [pageNo,memNo], function(err, results) {
+          
+            res.render('careerDiaryContentEditS', {memNo:req.session.memNo, memTitle:req.session.memTitle,data:results,diaryTagData:diaryTagData,pageNo:pageNo,data:results});
         });
       }
     });

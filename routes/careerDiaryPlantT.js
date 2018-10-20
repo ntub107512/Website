@@ -23,9 +23,28 @@ router.get('/', function(req, res, next) {
   }
   //------------------------------------------
   var memNo=req.session.memNo;
-  pool.query('select * from tmember where memNo=?', [memNo], function(err, results) {
-      res.render('careerDiaryPlantT', {memNo:req.session.memNo, memTitle:req.session.memTitle,picture:req.session.picture,data:results});
+
+  var diaryTagData;
+  var tagNo=req.query.tagNo;
+ //------------------	
+// 先取出日記tag資料
+  //------------------
+  pool.query('select * from diarytag ORDER BY tagNo', function(err, results) { 
+    diaryTagData=results;
   });
+  pool.query('select a.*,b.*,c.tagName from diary a,tmember b, diarytag c where a.tagNo=? and a.memNo=? and b.memNo=? and c.tagNo=?', [tagNo,memNo,memNo,tagNo], function(err, results) {
+    if(results.length==0){
+      console.log(diaryTagData);
+      pool.query('select * from tmember where memNo=?',[memNo] ,function(err, results) {     
+          res.render('careerDiaryBookCreateT', {memNo:req.session.memNo, memTitle:req.session.memTitle,picture:req.session.picture,data:results,diaryTagData:diaryTagData});
+      });   
+    }  
+    else{
+      res.render('careerDiaryPlantT', {memNo:req.session.memNo, memTitle:req.session.memTitle,picture:req.session.picture,data:results,tagNo:tagNo,diaryTagDat:diaryTagData});
+  
+    }
+    });
+  
 });
 
 module.exports = router;

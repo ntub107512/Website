@@ -4,11 +4,11 @@
    }
    
    .video {
-     background-image: #cccccc;
-     height: 450px;
-     width: 450px;
+     background-image:url("/images/leaf2.jpg");
+    width:100%;
+    height:100%;
      margin-bottom: 50px;
-     transform:scale(2.0);
+
    }
    
    /* Hide Play button + controls on iOS */

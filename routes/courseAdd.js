@@ -35,7 +35,7 @@ var storage = multer.diskStorage({
 //-----------------------------------------------
 // 產生multer的上傳物件
 //-----------------------------------------------
-var maxSize=800*1024;  //設定最大可接受圖片大小(800K)
+var maxSize=2000*2000;  //設定最大可接受圖片大小(800K)
 
 var upload = multer({
     storage:storage,
@@ -62,7 +62,7 @@ router.post('/', function(req, res) {
     var describe=req.param("describe");
     var picture='';
     var choose=req.param("choose");
-
+    console.log(choose);
 	// 如果有選擇圖片
     if (typeof req.file != 'undefined'){
         picture=req.file.filename;   //取得上傳照片新名稱             
@@ -74,7 +74,7 @@ router.post('/', function(req, res) {
         startDate:startDate,
         endDate:endDate,
         describes:describe,
-        picture:picture,
+        classPicture:picture,
         choose:choose
     }	
     
@@ -89,7 +89,10 @@ router.post('/', function(req, res) {
                     });		
                 res.render('courseAddFail', {});     //新增失敗
             }else{
-                res.render('courseAddSuccessS', {memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,className:className,describe:describe});  //新增成功
+                pool.query('select * from class ORDER BY classNo DESC LIMIT 1', newData, function(err, results) {
+                    classNo=results[0].classNo
+                    res.render('courseAddSuccessS', {memNo:req.session.memNo, memName:req.session.memName, memTitle:req.session.memTitle,picture:req.session.picture,className:className,describe:describe,classNo:classNo});  //新增成功
+                });
             }
         });
 
